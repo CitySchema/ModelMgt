@@ -9066,7 +9066,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : true,
+      "visibility" : false,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,

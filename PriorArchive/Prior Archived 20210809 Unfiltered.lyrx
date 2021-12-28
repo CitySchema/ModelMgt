@@ -14072,6 +14072,14 @@
         "datasetType" : "esriDTTable"
       },
       "autoGenerateRowTemplates" : true,
+      "rowTemplates" : [
+        {
+          "type" : "CIMFeatureTemplate",
+          "name" : "Bos3d_ModelCatalog_Tbl",
+          "tags" : "Table",
+          "toolProgID" : "ea2ecd82-d947-4d01-bf74-125dc09aa695"
+        }
+      ],
       "serviceTableID" : -1,
       "showPopups" : true
     }

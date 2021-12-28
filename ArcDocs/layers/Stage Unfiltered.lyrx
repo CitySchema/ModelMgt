@@ -40,7 +40,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : true,
+      "visibility" : false,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -1984,7 +1984,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : true,
+      "visibility" : false,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -3928,7 +3928,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -9760,7 +9760,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -13616,7 +13616,7 @@
     },
     {
       "type" : "CIMFeatureLayer",
-      "name" : "A80_Log_20210121_pts",
+      "name" : "Dev_Log_20210121_pts",
       "uRI" : "CIMPATH=Scene/85bc2431fcd144f0a5a1a7a071105422.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
@@ -13680,7 +13680,7 @@
           "type" : "CIMStandardDataConnection",
           "workspaceConnectionString" : "DATABASE=..\\..\\Stage\\Stage.gdb",
           "workspaceFactory" : "FileGDB",
-          "dataset" : "A80_Log_20210121_pts",
+          "dataset" : "Dev_Log_20210121_Pts",
           "datasetType" : "esriDTFeatureClass"
         },
         "studyAreaSpatialRel" : "esriSpatialRelUndefined",
@@ -13690,10 +13690,12 @@
         {
           "type" : "CIMFeatureTemplate",
           "name" : "Construction Complete",
+          "tags" : "Point",
+          "toolProgID" : "2a8b3331-5238-4025-972e-452a69535b06",
           "defaultValues" : {
             "type" : "PropertySet",
             "propertySetItems" : [
-              "PROJECT_STATUS",
+              "project_status",
               "Construction Complete"
             ]
           }
@@ -13701,10 +13703,12 @@
         {
           "type" : "CIMFeatureTemplate",
           "name" : "Permitted / Under Construction",
+          "tags" : "Point",
+          "toolProgID" : "2a8b3331-5238-4025-972e-452a69535b06",
           "defaultValues" : {
             "type" : "PropertySet",
             "propertySetItems" : [
-              "PROJECT_STATUS",
+              "project_status",
               "Permitted / Under Construction"
             ]
           }
@@ -13712,10 +13716,12 @@
         {
           "type" : "CIMFeatureTemplate",
           "name" : "Board Approved",
+          "tags" : "Point",
+          "toolProgID" : "2a8b3331-5238-4025-972e-452a69535b06",
           "defaultValues" : {
             "type" : "PropertySet",
             "propertySetItems" : [
-              "PROJECT_STATUS",
+              "project_status",
               "Board Approved"
             ]
           }
@@ -13723,10 +13729,12 @@
         {
           "type" : "CIMFeatureTemplate",
           "name" : "Pending Board Approval",
+          "tags" : "Point",
+          "toolProgID" : "2a8b3331-5238-4025-972e-452a69535b06",
           "defaultValues" : {
             "type" : "PropertySet",
             "propertySetItems" : [
-              "PROJECT_STATUS",
+              "project_status",
               "Pending Board Approval"
             ]
           }
@@ -13734,10 +13742,12 @@
         {
           "type" : "CIMFeatureTemplate",
           "name" : "Under Review",
+          "tags" : "Point",
+          "toolProgID" : "2a8b3331-5238-4025-972e-452a69535b06",
           "defaultValues" : {
             "type" : "PropertySet",
             "propertySetItems" : [
-              "PROJECT_STATUS",
+              "project_status",
               "Under Review"
             ]
           }
@@ -13745,10 +13755,12 @@
         {
           "type" : "CIMFeatureTemplate",
           "name" : "Prefile (Default)",
+          "tags" : "Point",
+          "toolProgID" : "2a8b3331-5238-4025-972e-452a69535b06",
           "defaultValues" : {
             "type" : "PropertySet",
             "propertySetItems" : [
-              "PROJECT_STATUS",
+              "project_status",
               "Prefile (Default)"
             ]
           }
@@ -13756,10 +13768,12 @@
         {
           "type" : "CIMFeatureTemplate",
           "name" : "Letter of Intent",
+          "tags" : "Point",
+          "toolProgID" : "2a8b3331-5238-4025-972e-452a69535b06",
           "defaultValues" : {
             "type" : "PropertySet",
             "propertySetItems" : [
-              "PROJECT_STATUS",
+              "project_status",
               "Letter of Intent"
             ]
           }
@@ -13767,10 +13781,12 @@
         {
           "type" : "CIMFeatureTemplate",
           "name" : "Inactive",
+          "tags" : "Point",
+          "toolProgID" : "2a8b3331-5238-4025-972e-452a69535b06",
           "defaultValues" : {
             "type" : "PropertySet",
             "propertySetItems" : [
-              "PROJECT_STATUS",
+              "project_status",
               "Inactive"
             ]
           }
@@ -13778,10 +13794,12 @@
         {
           "type" : "CIMFeatureTemplate",
           "name" : "<Null>",
+          "tags" : "Point",
+          "toolProgID" : "2a8b3331-5238-4025-972e-452a69535b06",
           "defaultValues" : {
             "type" : "PropertySet",
             "propertySetItems" : [
-              "PROJECT_STATUS",
+              "project_status",
               "<Null>"
             ]
           }
@@ -15622,7 +15640,6 @@
       "layerElevation" : {
         "type" : "CIMLayerElevationSurface"
       },
-      "expanded" : true,
       "layer3DProperties" : {
         "type" : "CIM3DLayerProperties",
         "castShadows" : true,
@@ -15640,7 +15657,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : true,
+      "visibility" : false,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -15676,6 +15693,22 @@
         {
           "type" : "CIMElevationSource",
           "dataConnection" : {
+            "type" : "CIMStandardDataConnection",
+            "workspaceConnectionString" : "DATABASE=..\\..\\Sources\\Terrains",
+            "workspaceFactory" : "Raster",
+            "dataset" : "dem_3ft_square_clip.tif",
+            "datasetType" : "esriDTAny"
+          },
+          "verticalUnit" : {
+            "uwkid" : 9003
+          },
+          "visibility" : true,
+          "name" : "dem_3ft_square_clip.tif",
+          "elevationSourceID" : "2422367b538d4b2e80846b6b2399d8b80"
+        },
+        {
+          "type" : "CIMElevationSource",
+          "dataConnection" : {
             "type" : "CIMAGSServiceConnection",
             "objectName" : "WorldElevation3D/Terrain3D",
             "objectType" : "ImageServer",
@@ -15690,7 +15723,7 @@
           "verticalUnit" : {
             "uwkid" : 9001
           },
-          "visibility" : true,
+          "visibility" : false,
           "name" : "WorldElevation3D/Terrain3D",
           "elevationSourceID" : "506adc9cfa60cb983ae8715f8f3c9c3400"
         }
