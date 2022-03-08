@@ -3,13 +3,13 @@
   "version" : "2.9.0",
   "build" : 32739,
   "layers" : [
-    "CIMPATH=scene/bos3d_active_mp2.xml"
+    "CIMPATH=scene/bos3d_active_mp.xml"
   ],
   "layerDefinitions" : [
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_Active_MP",
-      "uRI" : "CIMPATH=scene/bos3d_active_mp2.xml",
+      "uRI" : "CIMPATH=scene/bos3d_active_mp.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -455,7 +455,7 @@
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_20210809_Migrated_Clip.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3dModels_20211224.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_Active_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -1812,6 +1812,19 @@
                   "symbol" : {
                     "type" : "CIMMeshSymbol",
                     "symbolLayers" : [
+                      {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            170,
+                            102,
+                            205,
+                            100
+                          ]
+                        }
+                      },
                       {
                         "type" : "CIMMaterialSymbolLayer",
                         "enable" : true,

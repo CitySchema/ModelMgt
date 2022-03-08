@@ -3,16 +3,17 @@
   "version" : "2.9.0",
   "build" : 32739,
   "layers" : [
-    "CIMPATH=scene/new_group_layer3.xml"
+    "CIMPATH=scene/stage_unfiltered.xml"
   ],
   "layerDefinitions" : [
     {
       "type" : "CIMFeatureLayer",
-      "name" : "Stage_Active_MP",
+      "name" : "Stage_Existing_MP",
       "uRI" : "CIMPATH=scene/stage_active_mp.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
+      "metadataURI" : "CIMPATH=Metadata/f53d9f8f7492535816607159935a94f1.xml",
       "useSourceMetadata" : true,
       "description" : "Stage_Active_MP",
       "layerElevation" : {
@@ -454,11 +455,12 @@
             "searchMode" : "Exact"
           }
         ],
+        "selectionSetURI" : "CIMPATH=SelectionSet/7b13060ab6432cdab65ea2e30771666b.dat",
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
           "workspaceConnectionString" : "DATABASE=..\\..\\Stage\\Stage.gdb",
           "workspaceFactory" : "FileGDB",
-          "dataset" : "Stage_Active_MP",
+          "dataset" : "Stage_Existing_MP",
           "datasetType" : "esriDTFeatureClass"
         },
         "studyAreaSpatialRel" : "esriSpatialRelUndefined",
@@ -485,7 +487,7 @@
         },
         {
           "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Construction Complete",
+          "name" : "Complete",
           "tags" : "MultiPatch",
           "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
           "toolFilter" : [
@@ -497,7 +499,7 @@
             "type" : "PropertySet",
             "propertySetItems" : [
               "status",
-              "Construction Complete"
+              "Complete"
             ]
           }
         },
@@ -570,24 +572,6 @@
             "propertySetItems" : [
               "status",
               "Modified"
-            ]
-          }
-        },
-        {
-          "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Permitted Demo",
-          "tags" : "MultiPatch",
-          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
-          "toolFilter" : [
-            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
-            "d40bc750-9513-4adc-bd08-35f67eb39051",
-            "d755d802-c38c-40b6-ab20-71679d95b280"
-          ],
-          "defaultValues" : {
-            "type" : "PropertySet",
-            "propertySetItems" : [
-              "status",
-              "Permitted Demo"
             ]
           }
         },
@@ -1107,7 +1091,7 @@
               {
                 "type" : "CIMUniqueValueClass",
                 "editable" : true,
-                "label" : "Construction Complete",
+                "label" : "Complete",
                 "patch" : "Default",
                 "symbol" : {
                   "type" : "CIMSymbolReference",
@@ -1148,7 +1132,7 @@
                   {
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
-                      "Construction Complete"
+                      "Complete"
                     ]
                   }
                 ],
@@ -1348,56 +1332,6 @@
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
                       "Modified"
-                    ]
-                  }
-                ],
-                "visible" : true
-              },
-              {
-                "type" : "CIMUniqueValueClass",
-                "editable" : true,
-                "label" : "Permitted Demo",
-                "patch" : "Default",
-                "symbol" : {
-                  "type" : "CIMSymbolReference",
-                  "symbol" : {
-                    "type" : "CIMMeshSymbol",
-                    "symbolLayers" : [
-                      {
-                        "type" : "CIMSolidMeshEdge",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSVColor",
-                          "values" : [
-                            51.729999999999997,
-                            14.5,
-                            78.430000000000007,
-                            100
-                          ]
-                        }
-                      },
-                      {
-                        "type" : "CIMMaterialSymbolLayer",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSLColor",
-                          "values" : [
-                            357.49000000000001,
-                            81.25,
-                            86.159999999999997,
-                            100
-                          ]
-                        },
-                        "materialMode" : "Multiply"
-                      }
-                    ]
-                  }
-                },
-                "values" : [
-                  {
-                    "type" : "CIMUniqueValue",
-                    "fieldValues" : [
-                      "Permitted Demo"
                     ]
                   }
                 ],
@@ -1814,6 +1748,19 @@
                     "type" : "CIMMeshSymbol",
                     "symbolLayers" : [
                       {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            197,
+                            0,
+                            255,
+                            100
+                          ]
+                        }
+                      },
+                      {
                         "type" : "CIMMaterialSymbolLayer",
                         "enable" : true,
                         "color" : {
@@ -1953,15 +1900,17 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Stage_NewModels_MP",
-      "uRI" : "CIMPATH=scene/newmodels_mp.xml",
+      "uRI" : "CIMPATH=scene/stage_newmodels_mp.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
+      "metadataURI" : "CIMPATH=Metadata/221939f060dccaa18a6691f7e2a3990b.xml",
       "useSourceMetadata" : true,
       "description" : "NewModels_MP",
       "layerElevation" : {
         "type" : "CIMLayerElevationSurface"
       },
+      "expanded" : true,
       "layer3DProperties" : {
         "type" : "CIM3DLayerProperties",
         "castShadows" : true,
@@ -2429,7 +2378,7 @@
         },
         {
           "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Construction Complete",
+          "name" : "Complete",
           "tags" : "MultiPatch",
           "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
           "toolFilter" : [
@@ -2441,7 +2390,7 @@
             "type" : "PropertySet",
             "propertySetItems" : [
               "status",
-              "Construction Complete"
+              "Complete"
             ]
           }
         },
@@ -2514,24 +2463,6 @@
             "propertySetItems" : [
               "status",
               "Modified"
-            ]
-          }
-        },
-        {
-          "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Permitted Demo",
-          "tags" : "MultiPatch",
-          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
-          "toolFilter" : [
-            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
-            "d40bc750-9513-4adc-bd08-35f67eb39051",
-            "d755d802-c38c-40b6-ab20-71679d95b280"
-          ],
-          "defaultValues" : {
-            "type" : "PropertySet",
-            "propertySetItems" : [
-              "status",
-              "Permitted Demo"
             ]
           }
         },
@@ -3051,7 +2982,7 @@
               {
                 "type" : "CIMUniqueValueClass",
                 "editable" : true,
-                "label" : "Construction Complete",
+                "label" : "Complete",
                 "patch" : "Default",
                 "symbol" : {
                   "type" : "CIMSymbolReference",
@@ -3092,7 +3023,7 @@
                   {
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
-                      "Construction Complete"
+                      "Complete"
                     ]
                   }
                 ],
@@ -3292,56 +3223,6 @@
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
                       "Modified"
-                    ]
-                  }
-                ],
-                "visible" : true
-              },
-              {
-                "type" : "CIMUniqueValueClass",
-                "editable" : true,
-                "label" : "Permitted Demo",
-                "patch" : "Default",
-                "symbol" : {
-                  "type" : "CIMSymbolReference",
-                  "symbol" : {
-                    "type" : "CIMMeshSymbol",
-                    "symbolLayers" : [
-                      {
-                        "type" : "CIMSolidMeshEdge",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSVColor",
-                          "values" : [
-                            51.729999999999997,
-                            14.5,
-                            78.430000000000007,
-                            100
-                          ]
-                        }
-                      },
-                      {
-                        "type" : "CIMMaterialSymbolLayer",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSLColor",
-                          "values" : [
-                            357.49000000000001,
-                            81.25,
-                            86.159999999999997,
-                            100
-                          ]
-                        },
-                        "materialMode" : "Multiply"
-                      }
-                    ]
-                  }
-                },
-                "values" : [
-                  {
-                    "type" : "CIMUniqueValue",
-                    "fieldValues" : [
-                      "Permitted Demo"
                     ]
                   }
                 ],
@@ -3758,6 +3639,19 @@
                     "type" : "CIMMeshSymbol",
                     "symbolLayers" : [
                       {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            197,
+                            0,
+                            255,
+                            100
+                          ]
+                        }
+                      },
+                      {
                         "type" : "CIMMaterialSymbolLayer",
                         "enable" : true,
                         "color" : {
@@ -3901,6 +3795,7 @@
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
+      "metadataURI" : "CIMPATH=Metadata/dfbae5668f14aab22061ebe252b2a217.xml",
       "useSourceMetadata" : true,
       "description" : "Stage_Proposed_MP",
       "layerElevation" : {
@@ -4346,7 +4241,7 @@
           "type" : "CIMStandardDataConnection",
           "workspaceConnectionString" : "DATABASE=..\\..\\Stage\\Stage.gdb",
           "workspaceFactory" : "FileGDB",
-          "dataset" : "Stage_Proposed_MP",
+          "dataset" : "Stage_Approved_MP",
           "datasetType" : "esriDTFeatureClass"
         },
         "studyAreaSpatialRel" : "esriSpatialRelUndefined",
@@ -4373,7 +4268,7 @@
         },
         {
           "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Construction Complete",
+          "name" : "Complete",
           "tags" : "MultiPatch",
           "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
           "toolFilter" : [
@@ -4385,7 +4280,7 @@
             "type" : "PropertySet",
             "propertySetItems" : [
               "status",
-              "Construction Complete"
+              "Complete"
             ]
           }
         },
@@ -4458,24 +4353,6 @@
             "propertySetItems" : [
               "status",
               "Modified"
-            ]
-          }
-        },
-        {
-          "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Permitted Demo",
-          "tags" : "MultiPatch",
-          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
-          "toolFilter" : [
-            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
-            "d40bc750-9513-4adc-bd08-35f67eb39051",
-            "d755d802-c38c-40b6-ab20-71679d95b280"
-          ],
-          "defaultValues" : {
-            "type" : "PropertySet",
-            "propertySetItems" : [
-              "status",
-              "Permitted Demo"
             ]
           }
         },
@@ -4995,7 +4872,7 @@
               {
                 "type" : "CIMUniqueValueClass",
                 "editable" : true,
-                "label" : "Construction Complete",
+                "label" : "Complete",
                 "patch" : "Default",
                 "symbol" : {
                   "type" : "CIMSymbolReference",
@@ -5036,7 +4913,7 @@
                   {
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
-                      "Construction Complete"
+                      "Complete"
                     ]
                   }
                 ],
@@ -5236,56 +5113,6 @@
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
                       "Modified"
-                    ]
-                  }
-                ],
-                "visible" : true
-              },
-              {
-                "type" : "CIMUniqueValueClass",
-                "editable" : true,
-                "label" : "Permitted Demo",
-                "patch" : "Default",
-                "symbol" : {
-                  "type" : "CIMSymbolReference",
-                  "symbol" : {
-                    "type" : "CIMMeshSymbol",
-                    "symbolLayers" : [
-                      {
-                        "type" : "CIMSolidMeshEdge",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSVColor",
-                          "values" : [
-                            51.729999999999997,
-                            14.5,
-                            78.430000000000007,
-                            100
-                          ]
-                        }
-                      },
-                      {
-                        "type" : "CIMMaterialSymbolLayer",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSLColor",
-                          "values" : [
-                            357.49000000000001,
-                            81.25,
-                            86.159999999999997,
-                            100
-                          ]
-                        },
-                        "materialMode" : "Multiply"
-                      }
-                    ]
-                  }
-                },
-                "values" : [
-                  {
-                    "type" : "CIMUniqueValue",
-                    "fieldValues" : [
-                      "Permitted Demo"
                     ]
                   }
                 ],
@@ -5702,6 +5529,19 @@
                     "type" : "CIMMeshSymbol",
                     "symbolLayers" : [
                       {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            197,
+                            0,
+                            255,
+                            100
+                          ]
+                        }
+                      },
+                      {
                         "type" : "CIMMaterialSymbolLayer",
                         "enable" : true,
                         "color" : {
@@ -5841,10 +5681,11 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Stage_History_MP",
-      "uRI" : "CIMPATH=scene/stage_history_mp.xml",
+      "uRI" : "CIMPATH=scene/stage_history_mp2.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
+      "metadataURI" : "CIMPATH=Metadata/cb1e66358c6335b42eedd532bb96bd59.xml",
       "useSourceMetadata" : true,
       "description" : "Stage_History_MP",
       "layerElevation" : {
@@ -6317,7 +6158,7 @@
         },
         {
           "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Construction Complete",
+          "name" : "Complete",
           "tags" : "MultiPatch",
           "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
           "toolFilter" : [
@@ -6329,7 +6170,7 @@
             "type" : "PropertySet",
             "propertySetItems" : [
               "status",
-              "Construction Complete"
+              "Complete"
             ]
           }
         },
@@ -6402,24 +6243,6 @@
             "propertySetItems" : [
               "status",
               "Modified"
-            ]
-          }
-        },
-        {
-          "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Permitted Demo",
-          "tags" : "MultiPatch",
-          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
-          "toolFilter" : [
-            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
-            "d40bc750-9513-4adc-bd08-35f67eb39051",
-            "d755d802-c38c-40b6-ab20-71679d95b280"
-          ],
-          "defaultValues" : {
-            "type" : "PropertySet",
-            "propertySetItems" : [
-              "status",
-              "Permitted Demo"
             ]
           }
         },
@@ -6939,7 +6762,7 @@
               {
                 "type" : "CIMUniqueValueClass",
                 "editable" : true,
-                "label" : "Construction Complete",
+                "label" : "Complete",
                 "patch" : "Default",
                 "symbol" : {
                   "type" : "CIMSymbolReference",
@@ -6980,7 +6803,7 @@
                   {
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
-                      "Construction Complete"
+                      "Complete"
                     ]
                   }
                 ],
@@ -7180,56 +7003,6 @@
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
                       "Modified"
-                    ]
-                  }
-                ],
-                "visible" : true
-              },
-              {
-                "type" : "CIMUniqueValueClass",
-                "editable" : true,
-                "label" : "Permitted Demo",
-                "patch" : "Default",
-                "symbol" : {
-                  "type" : "CIMSymbolReference",
-                  "symbol" : {
-                    "type" : "CIMMeshSymbol",
-                    "symbolLayers" : [
-                      {
-                        "type" : "CIMSolidMeshEdge",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSVColor",
-                          "values" : [
-                            51.729999999999997,
-                            14.5,
-                            78.430000000000007,
-                            100
-                          ]
-                        }
-                      },
-                      {
-                        "type" : "CIMMaterialSymbolLayer",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSLColor",
-                          "values" : [
-                            357.49000000000001,
-                            81.25,
-                            86.159999999999997,
-                            100
-                          ]
-                        },
-                        "materialMode" : "Multiply"
-                      }
-                    ]
-                  }
-                },
-                "values" : [
-                  {
-                    "type" : "CIMUniqueValue",
-                    "fieldValues" : [
-                      "Permitted Demo"
                     ]
                   }
                 ],
@@ -7646,6 +7419,19 @@
                     "type" : "CIMMeshSymbol",
                     "symbolLayers" : [
                       {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            197,
+                            0,
+                            255,
+                            100
+                          ]
+                        }
+                      },
+                      {
                         "type" : "CIMMaterialSymbolLayer",
                         "enable" : true,
                         "color" : {
@@ -7785,10 +7571,11 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Stage_Retired_MP",
-      "uRI" : "CIMPATH=scene/stage_retired_mp.xml",
+      "uRI" : "CIMPATH=scene/stage_retired_mp2.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
+      "metadataURI" : "CIMPATH=Metadata/9884a44d755bea64080eda278ea1982e.xml",
       "useSourceMetadata" : true,
       "description" : "Stage_Retired_MP",
       "layerElevation" : {
@@ -8261,7 +8048,7 @@
         },
         {
           "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Construction Complete",
+          "name" : "Complete",
           "tags" : "MultiPatch",
           "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
           "toolFilter" : [
@@ -8273,7 +8060,7 @@
             "type" : "PropertySet",
             "propertySetItems" : [
               "status",
-              "Construction Complete"
+              "Complete"
             ]
           }
         },
@@ -8346,24 +8133,6 @@
             "propertySetItems" : [
               "status",
               "Modified"
-            ]
-          }
-        },
-        {
-          "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Permitted Demo",
-          "tags" : "MultiPatch",
-          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
-          "toolFilter" : [
-            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
-            "d40bc750-9513-4adc-bd08-35f67eb39051",
-            "d755d802-c38c-40b6-ab20-71679d95b280"
-          ],
-          "defaultValues" : {
-            "type" : "PropertySet",
-            "propertySetItems" : [
-              "status",
-              "Permitted Demo"
             ]
           }
         },
@@ -8883,7 +8652,7 @@
               {
                 "type" : "CIMUniqueValueClass",
                 "editable" : true,
-                "label" : "Construction Complete",
+                "label" : "Complete",
                 "patch" : "Default",
                 "symbol" : {
                   "type" : "CIMSymbolReference",
@@ -8924,7 +8693,7 @@
                   {
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
-                      "Construction Complete"
+                      "Complete"
                     ]
                   }
                 ],
@@ -9124,56 +8893,6 @@
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
                       "Modified"
-                    ]
-                  }
-                ],
-                "visible" : true
-              },
-              {
-                "type" : "CIMUniqueValueClass",
-                "editable" : true,
-                "label" : "Permitted Demo",
-                "patch" : "Default",
-                "symbol" : {
-                  "type" : "CIMSymbolReference",
-                  "symbol" : {
-                    "type" : "CIMMeshSymbol",
-                    "symbolLayers" : [
-                      {
-                        "type" : "CIMSolidMeshEdge",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSVColor",
-                          "values" : [
-                            51.729999999999997,
-                            14.5,
-                            78.430000000000007,
-                            100
-                          ]
-                        }
-                      },
-                      {
-                        "type" : "CIMMaterialSymbolLayer",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSLColor",
-                          "values" : [
-                            357.49000000000001,
-                            81.25,
-                            86.159999999999997,
-                            100
-                          ]
-                        },
-                        "materialMode" : "Multiply"
-                      }
-                    ]
-                  }
-                },
-                "values" : [
-                  {
-                    "type" : "CIMUniqueValue",
-                    "fieldValues" : [
-                      "Permitted Demo"
                     ]
                   }
                 ],
@@ -9590,6 +9309,19 @@
                     "type" : "CIMMeshSymbol",
                     "symbolLayers" : [
                       {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            197,
+                            0,
+                            255,
+                            100
+                          ]
+                        }
+                      },
+                      {
                         "type" : "CIMMaterialSymbolLayer",
                         "enable" : true,
                         "color" : {
@@ -9729,10 +9461,11 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Stage_Internal_MP",
-      "uRI" : "CIMPATH=scene/stage_internal_mp.xml",
+      "uRI" : "CIMPATH=scene/stage_internal_mp2.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
+      "metadataURI" : "CIMPATH=Metadata/020559ed0cf0c57e90a291707cb9cebb.xml",
       "useSourceMetadata" : true,
       "description" : "Stage_Internal_MP",
       "layerElevation" : {
@@ -10205,7 +9938,7 @@
         },
         {
           "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Construction Complete",
+          "name" : "Complete",
           "tags" : "MultiPatch",
           "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
           "toolFilter" : [
@@ -10217,7 +9950,7 @@
             "type" : "PropertySet",
             "propertySetItems" : [
               "status",
-              "Construction Complete"
+              "Complete"
             ]
           }
         },
@@ -10290,24 +10023,6 @@
             "propertySetItems" : [
               "status",
               "Modified"
-            ]
-          }
-        },
-        {
-          "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Permitted Demo",
-          "tags" : "MultiPatch",
-          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
-          "toolFilter" : [
-            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
-            "d40bc750-9513-4adc-bd08-35f67eb39051",
-            "d755d802-c38c-40b6-ab20-71679d95b280"
-          ],
-          "defaultValues" : {
-            "type" : "PropertySet",
-            "propertySetItems" : [
-              "status",
-              "Permitted Demo"
             ]
           }
         },
@@ -10827,7 +10542,7 @@
               {
                 "type" : "CIMUniqueValueClass",
                 "editable" : true,
-                "label" : "Construction Complete",
+                "label" : "Complete",
                 "patch" : "Default",
                 "symbol" : {
                   "type" : "CIMSymbolReference",
@@ -10868,7 +10583,7 @@
                   {
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
-                      "Construction Complete"
+                      "Complete"
                     ]
                   }
                 ],
@@ -11068,56 +10783,6 @@
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
                       "Modified"
-                    ]
-                  }
-                ],
-                "visible" : true
-              },
-              {
-                "type" : "CIMUniqueValueClass",
-                "editable" : true,
-                "label" : "Permitted Demo",
-                "patch" : "Default",
-                "symbol" : {
-                  "type" : "CIMSymbolReference",
-                  "symbol" : {
-                    "type" : "CIMMeshSymbol",
-                    "symbolLayers" : [
-                      {
-                        "type" : "CIMSolidMeshEdge",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSVColor",
-                          "values" : [
-                            51.729999999999997,
-                            14.5,
-                            78.430000000000007,
-                            100
-                          ]
-                        }
-                      },
-                      {
-                        "type" : "CIMMaterialSymbolLayer",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSLColor",
-                          "values" : [
-                            357.49000000000001,
-                            81.25,
-                            86.159999999999997,
-                            100
-                          ]
-                        },
-                        "materialMode" : "Multiply"
-                      }
-                    ]
-                  }
-                },
-                "values" : [
-                  {
-                    "type" : "CIMUniqueValue",
-                    "fieldValues" : [
-                      "Permitted Demo"
                     ]
                   }
                 ],
@@ -11534,6 +11199,19 @@
                     "type" : "CIMMeshSymbol",
                     "symbolLayers" : [
                       {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            197,
+                            0,
+                            255,
+                            100
+                          ]
+                        }
+                      },
+                      {
                         "type" : "CIMMaterialSymbolLayer",
                         "enable" : true,
                         "color" : {
@@ -11673,10 +11351,11 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Stage_Alt_MP",
-      "uRI" : "CIMPATH=scene/stage_alt_mp.xml",
+      "uRI" : "CIMPATH=scene/stage_alt_mp2.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
+      "metadataURI" : "CIMPATH=Metadata/62a8a0cbf6aaf1567cbc2e1108d431a7.xml",
       "useSourceMetadata" : true,
       "description" : "Stage_Alt_MP",
       "layerElevation" : {
@@ -12149,7 +11828,7 @@
         },
         {
           "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Construction Complete",
+          "name" : "Complete",
           "tags" : "MultiPatch",
           "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
           "toolFilter" : [
@@ -12161,7 +11840,7 @@
             "type" : "PropertySet",
             "propertySetItems" : [
               "status",
-              "Construction Complete"
+              "Complete"
             ]
           }
         },
@@ -12234,24 +11913,6 @@
             "propertySetItems" : [
               "status",
               "Modified"
-            ]
-          }
-        },
-        {
-          "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Permitted Demo",
-          "tags" : "MultiPatch",
-          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
-          "toolFilter" : [
-            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
-            "d40bc750-9513-4adc-bd08-35f67eb39051",
-            "d755d802-c38c-40b6-ab20-71679d95b280"
-          ],
-          "defaultValues" : {
-            "type" : "PropertySet",
-            "propertySetItems" : [
-              "status",
-              "Permitted Demo"
             ]
           }
         },
@@ -12771,7 +12432,7 @@
               {
                 "type" : "CIMUniqueValueClass",
                 "editable" : true,
-                "label" : "Construction Complete",
+                "label" : "Complete",
                 "patch" : "Default",
                 "symbol" : {
                   "type" : "CIMSymbolReference",
@@ -12812,7 +12473,7 @@
                   {
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
-                      "Construction Complete"
+                      "Complete"
                     ]
                   }
                 ],
@@ -13012,56 +12673,6 @@
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
                       "Modified"
-                    ]
-                  }
-                ],
-                "visible" : true
-              },
-              {
-                "type" : "CIMUniqueValueClass",
-                "editable" : true,
-                "label" : "Permitted Demo",
-                "patch" : "Default",
-                "symbol" : {
-                  "type" : "CIMSymbolReference",
-                  "symbol" : {
-                    "type" : "CIMMeshSymbol",
-                    "symbolLayers" : [
-                      {
-                        "type" : "CIMSolidMeshEdge",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSVColor",
-                          "values" : [
-                            51.729999999999997,
-                            14.5,
-                            78.430000000000007,
-                            100
-                          ]
-                        }
-                      },
-                      {
-                        "type" : "CIMMaterialSymbolLayer",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMHSLColor",
-                          "values" : [
-                            357.49000000000001,
-                            81.25,
-                            86.159999999999997,
-                            100
-                          ]
-                        },
-                        "materialMode" : "Multiply"
-                      }
-                    ]
-                  }
-                },
-                "values" : [
-                  {
-                    "type" : "CIMUniqueValue",
-                    "fieldValues" : [
-                      "Permitted Demo"
                     ]
                   }
                 ],
@@ -13478,6 +13089,19 @@
                     "type" : "CIMMeshSymbol",
                     "symbolLayers" : [
                       {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            197,
+                            0,
+                            255,
+                            100
+                          ]
+                        }
+                      },
+                      {
                         "type" : "CIMMaterialSymbolLayer",
                         "enable" : true,
                         "color" : {
@@ -13617,10 +13241,11 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Dev_Log_20210121_pts",
-      "uRI" : "CIMPATH=Scene/85bc2431fcd144f0a5a1a7a071105422.xml",
+      "uRI" : "CIMPATH=scene/dev_log_20210121_pts.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
+      "metadataURI" : "CIMPATH=Metadata/7af9ba2a7c31771264af0ad365be3a5b.xml",
       "useSourceMetadata" : true,
       "description" : "A80_Log_20210121_pts",
       "layerElevation" : {
@@ -13936,7 +13561,7 @@
           "standardLabelPlacementProperties" : {
             "type" : "CIMStandardLabelPlacementProperties",
             "featureType" : "Line",
-            "featureWeight" : "Low",
+            "featureWeight" : "None",
             "labelWeight" : "High",
             "numLabelsOption" : "OneLabelPerName",
             "lineLabelPosition" : {
@@ -15226,10 +14851,11 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Issue_Points",
-      "uRI" : "CIMPATH=scene/issue_points.xml",
+      "uRI" : "CIMPATH=scene/issue_points6.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
+      "metadataURI" : "CIMPATH=Metadata/b5be42193260291e61a3bd0c398f37ab.xml",
       "useSourceMetadata" : true,
       "description" : "Issue_Points",
       "layerElevation" : {
@@ -15630,7 +15256,7 @@
     {
       "type" : "CIMGroupLayer",
       "name" : "Stage Unfiltered",
-      "uRI" : "CIMPATH=scene/new_group_layer3.xml",
+      "uRI" : "CIMPATH=scene/stage_unfiltered.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
@@ -15668,22 +15294,72 @@
       "allowDrapingOnIntegratedMesh" : true,
       "layers" : [
         "CIMPATH=scene/stage_active_mp.xml",
-        "CIMPATH=scene/newmodels_mp.xml",
+        "CIMPATH=scene/stage_newmodels_mp.xml",
         "CIMPATH=scene/stage_proposed_mp.xml",
-        "CIMPATH=scene/stage_history_mp.xml",
-        "CIMPATH=scene/stage_retired_mp.xml",
-        "CIMPATH=scene/stage_internal_mp.xml",
-        "CIMPATH=scene/stage_alt_mp.xml",
-        "CIMPATH=Scene/85bc2431fcd144f0a5a1a7a071105422.xml",
-        "CIMPATH=scene/issue_points.xml"
+        "CIMPATH=scene/stage_history_mp2.xml",
+        "CIMPATH=scene/stage_retired_mp2.xml",
+        "CIMPATH=scene/stage_internal_mp2.xml",
+        "CIMPATH=scene/stage_alt_mp2.xml",
+        "CIMPATH=scene/dev_log_20210121_pts.xml",
+        "CIMPATH=scene/issue_points6.xml"
       ]
     }
   ],
   "binaryReferences" : [
     {
       "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/020559ed0cf0c57e90a291707cb9cebb.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Stage_Internal_MP</resTitle></idCitation><idAbs>Stage_Internal_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/221939f060dccaa18a6691f7e2a3990b.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Stage_NewModels_MP</resTitle></idCitation><idAbs>NewModels_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/62a8a0cbf6aaf1567cbc2e1108d431a7.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Stage_Alt_MP</resTitle></idCitation><idAbs>Stage_Alt_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/7af9ba2a7c31771264af0ad365be3a5b.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Dev_Log_20210121_pts</resTitle></idCitation><idAbs>A80_Log_20210121_pts</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/9884a44d755bea64080eda278ea1982e.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Stage_Retired_MP</resTitle></idCitation><idAbs>Stage_Retired_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/b5be42193260291e61a3bd0c398f37ab.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Issue_Points</resTitle></idCitation><idAbs>Issue_Points</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/cb1e66358c6335b42eedd532bb96bd59.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Stage_History_MP</resTitle></idCitation><idAbs>Stage_History_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/dfbae5668f14aab22061ebe252b2a217.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Stage_Proposed_MP</resTitle></idCitation><idAbs>Stage_Proposed_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
       "uRI" : "CIMPATH=Metadata/e228a53ab8f75db8731e09beee27b572.xml",
       "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20201218</CreaDate><CreaTime>13504800</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>New Group Layer</resTitle></idCitation><idAbs>New Group Layer</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/f53d9f8f7492535816607159935a94f1.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Stage_Active_MP</resTitle></idCitation><idAbs>Stage_Active_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=SelectionSet/7b13060ab6432cdab65ea2e30771666b.dat",
+      "data" : "CgMxLjAQARoGCgQ2MTM2"
     }
   ],
   "elevationSurfaces" : [
