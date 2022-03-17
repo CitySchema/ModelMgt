@@ -41,7 +41,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -455,7 +455,6 @@
             "searchMode" : "Exact"
           }
         ],
-        "selectionSetURI" : "CIMPATH=SelectionSet/7b13060ab6432cdab65ea2e30771666b.dat",
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
           "workspaceConnectionString" : "DATABASE=..\\..\\Stage\\Stage.gdb",
@@ -1910,7 +1909,6 @@
       "layerElevation" : {
         "type" : "CIMLayerElevationSurface"
       },
-      "expanded" : true,
       "layer3DProperties" : {
         "type" : "CIM3DLayerProperties",
         "castShadows" : true,
@@ -3790,7 +3788,7 @@
     },
     {
       "type" : "CIMFeatureLayer",
-      "name" : "Stage_Proposed_MP",
+      "name" : "Stage_Approved_MP",
       "uRI" : "CIMPATH=scene/stage_proposed_mp.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
@@ -3823,7 +3821,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : true,
+      "visibility" : false,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -9493,7 +9491,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : true,
+      "visibility" : false,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -15266,6 +15264,7 @@
       "layerElevation" : {
         "type" : "CIMLayerElevationSurface"
       },
+      "expanded" : true,
       "layer3DProperties" : {
         "type" : "CIM3DLayerProperties",
         "castShadows" : true,
@@ -15355,11 +15354,6 @@
       "type" : "CIMBinaryReference",
       "uRI" : "CIMPATH=Metadata/f53d9f8f7492535816607159935a94f1.xml",
       "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Stage_Active_MP</resTitle></idCitation><idAbs>Stage_Active_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
-    },
-    {
-      "type" : "CIMBinaryReference",
-      "uRI" : "CIMPATH=SelectionSet/7b13060ab6432cdab65ea2e30771666b.dat",
-      "data" : "CgMxLjAQARoGCgQ2MTM2"
     }
   ],
   "elevationSurfaces" : [
