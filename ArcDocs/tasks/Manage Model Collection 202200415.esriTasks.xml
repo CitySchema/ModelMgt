@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20201221</CreaDate>
+    <CreaTime>15302800</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>TRUE</SyncOnce>
+  </Esri>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Manage Model Collection</resTitle>
+    </idCitation>
+    <idPurp>Run this task to set up the defaults when initializing a model management workspace. </idPurp>
+    <idAbs></idAbs>
+  </dataIdInfo>
+</metadata>
