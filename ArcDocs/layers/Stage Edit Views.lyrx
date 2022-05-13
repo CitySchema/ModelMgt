@@ -8,8 +8,8 @@
   "layerDefinitions" : [
     {
       "type" : "CIMFeatureLayer",
-      "name" : "Stage Promo / Demo Candidates DQV",
-      "uRI" : "CIMPATH=scene/stage_existing_stable_dqv.xml",
+      "name" : "Stage Existing Stable DQV",
+      "uRI" : "CIMPATH=scene/stage_existing_demo_candidates_dqv.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -42,7 +42,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : true,
+      "visibility" : false,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -55,13 +55,13 @@
       "featureElevationExpression" : "Shape.Z",
       "featureTable" : {
         "type" : "CIMFeatureTable",
-        "definitionExpression" : "Status IN ('Under Construction', 'Approved Demo')",
+        "definitionExpression" : "Status IN ('Current', 'Complete')",
         "definitionExpressionName" : "Query 1",
         "definitionFilterChoices" : [
           {
             "type" : "CIMDefinitionFilter",
             "name" : "Query 1",
-            "definitionExpression" : "Status IN ('Under Construction', 'Approved Demo')"
+            "definitionExpression" : "Status IN ('Current', 'Complete')"
           }
         ],
         "displayField" : "Name",
@@ -1908,8 +1908,8 @@
     },
     {
       "type" : "CIMFeatureLayer",
-      "name" : "Stage Existing Stable DQV",
-      "uRI" : "CIMPATH=scene/stage_existing_demo_candidates_dqv.xml",
+      "name" : "Stage Promo / Demo Candidates DQV",
+      "uRI" : "CIMPATH=scene/stage_existing_stable_dqv.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -1942,7 +1942,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -1955,13 +1955,13 @@
       "featureElevationExpression" : "Shape.Z",
       "featureTable" : {
         "type" : "CIMFeatureTable",
-        "definitionExpression" : "Status IN ('Current', 'Complete')",
+        "definitionExpression" : "Status IN ('Under Construction', 'Approved Demo')",
         "definitionExpressionName" : "Query 1",
         "definitionFilterChoices" : [
           {
             "type" : "CIMDefinitionFilter",
             "name" : "Query 1",
-            "definitionExpression" : "Status IN ('Current', 'Complete')"
+            "definitionExpression" : "Status IN ('Under Construction', 'Approved Demo')"
           }
         ],
         "displayField" : "Name",
@@ -7642,7 +7642,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -9546,8 +9546,8 @@
       "blendingMode" : "Alpha",
       "allowDrapingOnIntegratedMesh" : true,
       "layers" : [
-        "CIMPATH=scene/stage_existing_stable_dqv.xml",
         "CIMPATH=scene/stage_existing_demo_candidates_dqv.xml",
+        "CIMPATH=scene/stage_existing_stable_dqv.xml",
         "CIMPATH=scene/stage_newmodels_to_active_dqv.xml",
         "CIMPATH=scene/stage_proposed_mp3.xml",
         "CIMPATH=scene/stage_internal_to_active_dqv.xml"
@@ -9589,7 +9589,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -13389,7 +13389,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -15283,7 +15283,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -19134,7 +19134,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -19147,13 +19147,13 @@
       "featureElevationExpression" : "Shape.Z",
       "featureTable" : {
         "type" : "CIMFeatureTable",
-        "definitionExpression" : "Status IN ('Permitted')",
+        "definitionExpression" : "Status IN ('Under Review', 'Prefile')",
         "definitionExpressionName" : "Query 1",
         "definitionFilterChoices" : [
           {
             "type" : "CIMDefinitionFilter",
             "name" : "Query 1",
-            "definitionExpression" : "Status IN ('Permitted')"
+            "definitionExpression" : "Status IN ('Under Review', 'Prefile')"
           }
         ],
         "displayField" : "Name",
@@ -22928,7 +22928,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -22980,7 +22980,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
