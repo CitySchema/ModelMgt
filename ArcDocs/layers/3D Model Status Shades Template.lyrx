@@ -3,23 +3,23 @@
   "version" : "2.9.0",
   "build" : 32739,
   "layers" : [
-    "CIMPATH=scene/stage_existing_mp.xml"
+    "CIMPATH=scene/3d_model_status_shades_template.xml"
   ],
   "layerDefinitions" : [
     {
       "type" : "CIMFeatureLayer",
       "name" : "3D Model Status Shades Template",
-      "uRI" : "CIMPATH=scene/stage_existing_mp.xml",
+      "uRI" : "CIMPATH=scene/3d_model_status_shades_template.xml",
       "sourceModifiedTime" : {
-        "type" : "TimeInstant"
+        "type" : "TimeInstant",
+        "start" : 978307200000
       },
-      "metadataURI" : "CIMPATH=Metadata/f53d9f8f7492535816607159935a94f1.xml",
-      "useSourceMetadata" : true,
-      "description" : "Stage_Active_MP",
+      "metadataURI" : "CIMPATH=Metadata/ea2dc02c0c280d942149338f002986c8.xml",
+      "useSourceMetadata" : false,
+      "description" : "Bos3d_DevPipeline_MP",
       "layerElevation" : {
         "type" : "CIMLayerElevationSurface"
       },
-      "expanded" : true,
       "layer3DProperties" : {
         "type" : "CIM3DLayerProperties",
         "castShadows" : true,
@@ -42,9 +42,87 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
+      "popupInfo" : {
+        "type" : "CIMPopupInfo",
+        "title" : "{Name}",
+        "expressionInfos" : [
+          {
+            "type" : "CIMExpressionInfo",
+            "title" : "Custom",
+            "expression" : "IIF (IsEmpty(Trim($feature.ProjectLnk)), \"none\", \"block\");",
+            "name" : "hasProjLink",
+            "returnType" : "String"
+          },
+          {
+            "type" : "CIMExpressionInfo",
+            "title" : "Custom",
+            "expression" : "IIF (IsEmpty(Trim($feature.Model_Note)), \"none\", \"block\");",
+            "name" : "hasNote",
+            "returnType" : "String"
+          },
+          {
+            "type" : "CIMExpressionInfo",
+            "title" : "Custom",
+            "expression" : "IIF (IsEmpty(Trim($feature.Model_Cred)), \"none\", \"block\");",
+            "name" : "hasCred",
+            "returnType" : "String"
+          },
+          {
+            "type" : "CIMExpressionInfo",
+            "title" : "Custom",
+            "expression" : "var fieldInfos = []\n\nif (!IsEmpty (Trim($feature.ProjectLnk))) {\n    Push (fieldInfos, {fieldName: 'ProjectLnk', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.Model_Cred))) {\n    Push (fieldInfos, {fieldName: 'Model_Cred', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.GoogleLnk))) {\n    Push (fieldInfos, {fieldName: '$feature.GoogleLnk', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.Model_Note))) {\n    Push (fieldInfos, {fieldName: 'Model_Note', label: 'Component'})\n\n};\nreturn {\n    type: 'fields',\n    Status: $feature.Status,\n    fieldInfos: fieldInfos,\n    attributes: {\n        'ProjectLnk': $feature.ProjectLnk,\n        'Model_Cred': $feature.Model_Cred,\n        'Model_Note': $feature.Model_Note\n    }\n}",
+            "name" : "WriteAtts",
+            "returnType" : "String"
+          },
+          {
+            "type" : "CIMExpressionInfo",
+            "title" : "Custom",
+            "expression" : "IIF (IsEmpty(Trim($feature.Parcel_Lnk)), \"none\", \"block\");",
+            "name" : "hasParcel_lnk",
+            "returnType" : "String"
+          }
+        ],
+        "mediaInfos" : [
+          {
+            "type" : "CIMTextMediaInfo",
+            "refreshRateUnit" : "esriTimeUnitsSeconds",
+            "rowSpan" : 1,
+            "columnSpan" : 1,
+            "text" : "<p style='padding-bottom: 2px; border-bottom: 1px solid lightgray;'><b>Model Status:</b> {Status} </p>\n<p style='display:{expression/hasNote};margin-top: 1px; padding-bottom: 1px; border-bottom: 1px solid lightgray;'>Note: {Model_Note}</p>\n<p style='display:{expression/hasprojLink};padding-bottom: 2px; border-bottom: 1px solid lightgray;'><a href=\"{ProjectLnk}\" target=\"_blank\" rel=\"nofollow\">View Project Page at BostonPlans.com</a></p>\n<p style='padding-bottom: 2px; border-bottom: 1px solid lightgray;'><a href=\"{GoogleLnk}\" target=\"_blank\" rel=\"nofollow\">View in Google Maps 3D</a></p>\n<p style='display:{expression/hasParcel_Lnk}; padding-bottom: 2px; border-bottom: 1px solid lightgray;'><a href=\"{Parcel_Lnk}\" target=\"_blank\" rel=\"nofollow\">View Property Assessor's Map</a></p>\n<p style='padding-bottom: 2px; border-bottom: 1px solid lightgray; display:{expression/hasCred};'><b>Model Credit:</b> {Model_Cred}</p>"
+          }
+        ],
+        "gridLayout" : {
+          "type" : "CIMPopupLayout",
+          "columnWidths" : [
+            100
+          ],
+          "borderWidth" : 0,
+          "borderColor" : {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          }
+        },
+        "fieldDescriptions" : [
+          {
+            "type" : "CIMPopupFieldDescription",
+            "alias" : "Name: ",
+            "fieldName" : "Name"
+          },
+          {
+            "type" : "CIMPopupFieldDescription",
+            "alias" : "View Project Web Page: ",
+            "fieldName" : "ProjectLnk"
+          }
+        ]
+      },
       "showPopups" : true,
       "serviceLayerID" : -1,
       "refreshRate" : -1,
@@ -427,7 +505,6 @@
             "type" : "CIMFieldDescription",
             "alias" : "RecInitUser",
             "fieldName" : "RecInitUser",
-            "readOnly" : true,
             "visible" : true,
             "searchMode" : "Exact"
           },
@@ -435,7 +512,6 @@
             "type" : "CIMFieldDescription",
             "alias" : "RecInitDt",
             "fieldName" : "RecInitDt",
-            "readOnly" : true,
             "visible" : true,
             "searchMode" : "Exact"
           },
@@ -443,7 +519,6 @@
             "type" : "CIMFieldDescription",
             "alias" : "RecModUser",
             "fieldName" : "RecModUser",
-            "readOnly" : true,
             "visible" : true,
             "searchMode" : "Exact"
           },
@@ -451,17 +526,15 @@
             "type" : "CIMFieldDescription",
             "alias" : "RecModDt",
             "fieldName" : "RecModDt",
-            "readOnly" : true,
             "visible" : true,
             "searchMode" : "Exact"
           }
         ],
-        "selectionSetURI" : "CIMPATH=SelectionSet/7b13060ab6432cdab65ea2e30771666b.dat",
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\Stage\\Stage.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
-          "dataset" : "Stage_Existing_MP",
+          "dataset" : "Bos3d_Existing_MP",
           "datasetType" : "esriDTFeatureClass"
         },
         "studyAreaSpatialRel" : "esriSpatialRelUndefined",
@@ -578,24 +651,6 @@
         },
         {
           "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Permitted",
-          "tags" : "MultiPatch",
-          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
-          "toolFilter" : [
-            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
-            "d40bc750-9513-4adc-bd08-35f67eb39051",
-            "d755d802-c38c-40b6-ab20-71679d95b280"
-          ],
-          "defaultValues" : {
-            "type" : "PropertySet",
-            "propertySetItems" : [
-              "status",
-              "Permitted"
-            ]
-          }
-        },
-        {
-          "type" : "CIMMultipatchFeatureTemplate",
           "name" : "Board Approved",
           "tags" : "MultiPatch",
           "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
@@ -663,24 +718,6 @@
             "propertySetItems" : [
               "status",
               "Internal Study"
-            ]
-          }
-        },
-        {
-          "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Proposal Superseded",
-          "tags" : "MultiPatch",
-          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
-          "toolFilter" : [
-            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
-            "d40bc750-9513-4adc-bd08-35f67eb39051",
-            "d755d802-c38c-40b6-ab20-71679d95b280"
-          ],
-          "defaultValues" : {
-            "type" : "PropertySet",
-            "propertySetItems" : [
-              "status",
-              "Proposal Superseded"
             ]
           }
         },
@@ -1091,7 +1128,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Complete",
                 "patch" : "Default",
                 "symbol" : {
@@ -1190,7 +1226,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Approved Demo",
                 "patch" : "Default",
                 "symbol" : {
@@ -1240,7 +1275,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Demolished",
                 "patch" : "Default",
                 "symbol" : {
@@ -1290,7 +1324,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Modified",
                 "patch" : "Default",
                 "symbol" : {
@@ -1340,57 +1373,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
-                "label" : "Permitted",
-                "patch" : "Default",
-                "symbol" : {
-                  "type" : "CIMSymbolReference",
-                  "symbol" : {
-                    "type" : "CIMMeshSymbol",
-                    "symbolLayers" : [
-                      {
-                        "type" : "CIMSolidMeshEdge",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMRGBColor",
-                          "values" : [
-                            163,
-                            255,
-                            115,
-                            100
-                          ]
-                        }
-                      },
-                      {
-                        "type" : "CIMMaterialSymbolLayer",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMRGBColor",
-                          "values" : [
-                            211,
-                            255,
-                            190,
-                            100
-                          ]
-                        },
-                        "materialMode" : "Multiply"
-                      }
-                    ]
-                  }
-                },
-                "values" : [
-                  {
-                    "type" : "CIMUniqueValue",
-                    "fieldValues" : [
-                      "Permitted"
-                    ]
-                  }
-                ],
-                "visible" : true
-              },
-              {
-                "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Board Approved",
                 "patch" : "Default",
                 "symbol" : {
@@ -1440,7 +1422,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Under Review",
                 "patch" : "Default",
                 "symbol" : {
@@ -1490,7 +1471,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Prefile",
                 "patch" : "Default",
                 "symbol" : {
@@ -1540,7 +1520,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Internal Study",
                 "patch" : "Default",
                 "symbol" : {
@@ -1590,57 +1569,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
-                "label" : "Proposal Superseded",
-                "patch" : "Default",
-                "symbol" : {
-                  "type" : "CIMSymbolReference",
-                  "symbol" : {
-                    "type" : "CIMMeshSymbol",
-                    "symbolLayers" : [
-                      {
-                        "type" : "CIMSolidMeshEdge",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMRGBColor",
-                          "values" : [
-                            0,
-                            112,
-                            255,
-                            100
-                          ]
-                        }
-                      },
-                      {
-                        "type" : "CIMMaterialSymbolLayer",
-                        "enable" : true,
-                        "color" : {
-                          "type" : "CIMRGBColor",
-                          "values" : [
-                            225,
-                            225,
-                            225,
-                            100
-                          ]
-                        },
-                        "materialMode" : "Multiply"
-                      }
-                    ]
-                  }
-                },
-                "values" : [
-                  {
-                    "type" : "CIMUniqueValue",
-                    "fieldValues" : [
-                      "Proposal Superseded"
-                    ]
-                  }
-                ],
-                "visible" : true
-              },
-              {
-                "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Inactive",
                 "patch" : "Default",
                 "symbol" : {
@@ -1690,7 +1618,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Proposal Built",
                 "patch" : "Default",
                 "symbol" : {
@@ -1740,7 +1667,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Alt Model",
                 "patch" : "Default",
                 "symbol" : {
@@ -1790,7 +1716,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Retired",
                 "patch" : "Default",
                 "symbol" : {
@@ -1840,7 +1765,6 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "editable" : true,
                 "label" : "Expunge",
                 "patch" : "Default",
                 "symbol" : {
@@ -1889,10 +1813,9 @@
                 "visible" : true
               }
             ],
-            "heading" : "Status"
+            "heading" : "Model Status"
           }
         ],
-        "useDefaultSymbol" : true,
         "polygonSymbolColorTarget" : "Fill"
       },
       "scaleSymbols" : true,
@@ -1902,13 +1825,8 @@
   "binaryReferences" : [
     {
       "type" : "CIMBinaryReference",
-      "uRI" : "CIMPATH=Metadata/f53d9f8f7492535816607159935a94f1.xml",
-      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Stage_Active_MP</resTitle></idCitation><idAbs>Stage_Active_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
-    },
-    {
-      "type" : "CIMBinaryReference",
-      "uRI" : "CIMPATH=SelectionSet/7b13060ab6432cdab65ea2e30771666b.dat",
-      "data" : "CgMxLjAQARoGCgQ2MTM2"
+      "uRI" : "CIMPATH=Metadata/ea2dc02c0c280d942149338f002986c8.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220522</CreaDate><CreaTime>11203400</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Development Pipeline</resTitle></idCitation><searchKeys/><idPurp></idPurp><idAbs>&lt;DIV STYLE=\"text-align:Left;font-size:12pt\"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Created to portray the features in the development pipeline for ArcGIS Pro.  The DevPipeline feature class includes models that have a status of Under Review or Approved.  &lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs><idCredit></idCredit><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
     }
   ],
   "rGBColorProfile" : "sRGB IEC61966-2-1 noBPC",

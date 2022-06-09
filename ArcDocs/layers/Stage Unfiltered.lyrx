@@ -14912,7 +14912,7 @@
         "editable" : true,
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\..\\ModelMgt_20201214\\Stage\\Stage.gdb",
+          "workspaceConnectionString" : "DATABASE=S:\\trash\\ModelMgt-main\\ModelMgt_Migration_20220308\\Stage\\Stage.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Issue_Points",
           "datasetType" : "esriDTFeatureClass"
@@ -15165,8 +15165,8 @@
                 },
                 "anchorPointUnits" : "Relative",
                 "dominantSizeAxis3D" : "Y",
-                "size" : 1,
-                "billboardMode3D" : "None",
+                "size" : 3,
+                "billboardMode3D" : "FaceNearPlane",
                 "frame" : {
                   "xmin" : -5,
                   "ymin" : -5,
@@ -15190,7 +15190,7 @@
                                 5
                               ],
                               [
-                                2.2962127484012875e-16,
+                                2.6789148731348353e-16,
                                 0
                               ],
                               0,
@@ -15210,7 +15210,7 @@
                           "joinStyle" : "Round",
                           "lineStyle3D" : "Strip",
                           "miterLimit" : 10,
-                          "width" : 0,
+                          "width" : 0.59999999999999998,
                           "color" : {
                             "type" : "CIMRGBColor",
                             "values" : [
@@ -15227,7 +15227,7 @@
                           "color" : {
                             "type" : "CIMRGBColor",
                             "values" : [
-                              255,
+                              230,
                               0,
                               0,
                               100
@@ -15393,7 +15393,7 @@
           "verticalUnit" : {
             "uwkid" : 9001
           },
-          "visibility" : false,
+          "visibility" : true,
           "name" : "WorldElevation3D/Terrain3D",
           "elevationSourceID" : "506adc9cfa60cb983ae8715f8f3c9c3400"
         }
