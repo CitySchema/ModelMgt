@@ -3,20 +3,20 @@
   "version" : "2.9.0",
   "build" : 32739,
   "layers" : [
-    "CIMPATH=scene/prior_archived_layerdemo.xml"
+    "CIMPATH=scene/next_edition_20211224_layerdemo.xml"
   ],
   "layerDefinitions" : [
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_Existing_Stable DQV",
-      "uRI" : "CIMPATH=scene/bos3d_existing_stable_dqv.xml",
+      "uRI" : "CIMPATH=scene/bos3d_active_stable_dqv2.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
       },
-      "metadataURI" : "CIMPATH=Metadata/ea2dc02c0c280d942149338f002986c8.xml",
-      "useSourceMetadata" : false,
-      "description" : "Bos3d_DevPipeline_MP",
+      "metadataURI" : "CIMPATH=Metadata/6e1478ef56389136ec5b5e86d6896d33.xml",
+      "useSourceMetadata" : true,
+      "description" : "Bos3d_Active_MP",
       "layerElevation" : {
         "type" : "CIMLayerElevationSurface"
       },
@@ -42,87 +42,9 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
-      "popupInfo" : {
-        "type" : "CIMPopupInfo",
-        "title" : "{Name}",
-        "expressionInfos" : [
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.ProjectLnk)), \"none\", \"block\");",
-            "name" : "hasProjLink",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.Model_Note)), \"none\", \"block\");",
-            "name" : "hasNote",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.Model_Cred)), \"none\", \"block\");",
-            "name" : "hasCred",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "var fieldInfos = []\n\nif (!IsEmpty (Trim($feature.ProjectLnk))) {\n    Push (fieldInfos, {fieldName: 'ProjectLnk', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.Model_Cred))) {\n    Push (fieldInfos, {fieldName: 'Model_Cred', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.GoogleLnk))) {\n    Push (fieldInfos, {fieldName: '$feature.GoogleLnk', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.Model_Note))) {\n    Push (fieldInfos, {fieldName: 'Model_Note', label: 'Component'})\n\n};\nreturn {\n    type: 'fields',\n    Status: $feature.Status,\n    fieldInfos: fieldInfos,\n    attributes: {\n        'ProjectLnk': $feature.ProjectLnk,\n        'Model_Cred': $feature.Model_Cred,\n        'Model_Note': $feature.Model_Note\n    }\n}",
-            "name" : "WriteAtts",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.Parcel_Lnk)), \"none\", \"block\");",
-            "name" : "hasParcel_lnk",
-            "returnType" : "String"
-          }
-        ],
-        "mediaInfos" : [
-          {
-            "type" : "CIMTextMediaInfo",
-            "refreshRateUnit" : "esriTimeUnitsSeconds",
-            "rowSpan" : 1,
-            "columnSpan" : 1,
-            "text" : "<p style='padding-bottom: 2px; border-bottom: 1px solid lightgray;'><b>Model Status:</b> {Status} </p>\n<p style='display:{expression/hasNote};margin-top: 1px; padding-bottom: 1px; border-bottom: 1px solid lightgray;'>Note: {Model_Note}</p>\n<p style='display:{expression/hasprojLink};padding-bottom: 2px; border-bottom: 1px solid lightgray;'><a href=\"{ProjectLnk}\" target=\"_blank\" rel=\"nofollow\">View Project Page at BostonPlans.com</a></p>\n<p style='padding-bottom: 1px; border-bottom: 1px solid lightgray;'><a href=\"{GoogleLnk}\" target=\"_blank\" rel=\"nofollow\">View in Google Maps 3D</a></p>\n<p style='display:{expression/hasParcel_Lnk}; padding-bottom: 2px; border-bottom: 1px solid lightgray;'><a href=\"{Parcel_Lnk}\" target=\"_blank\" rel=\"nofollow\">View Property Assessor's Map</a></p>\n<p style='display:{expression/hasCred};'><b>Model Credit:</b> {Model_Cred}</p>\n<p style='font-size: 10px; padding-bottom: 1px; border-top: 1px solid gray;'><b><a href=\"https://maps.bostonplans.org/3d/Bos3d_Tiled_Data/Bos3d_ModelCollection_OBJ/{Tile_ID}_ModelCollection_OBJ/{Model_ID}_OBJ.zip\" target=\"_blank\" rel=\"nofollow\">Download Model in .OBJ Format</a></b></p>"
-          }
-        ],
-        "gridLayout" : {
-          "type" : "CIMPopupLayout",
-          "columnWidths" : [
-            100
-          ],
-          "borderWidth" : 0,
-          "borderColor" : {
-            "type" : "CIMRGBColor",
-            "values" : [
-              0,
-              0,
-              0,
-              100
-            ]
-          }
-        },
-        "fieldDescriptions" : [
-          {
-            "type" : "CIMPopupFieldDescription",
-            "alias" : "Name: ",
-            "fieldName" : "Name"
-          },
-          {
-            "type" : "CIMPopupFieldDescription",
-            "alias" : "View Project Web Page: ",
-            "fieldName" : "ProjectLnk"
-          }
-        ]
-      },
       "showPopups" : true,
       "serviceLayerID" : -1,
       "refreshRate" : -1,
@@ -133,13 +55,13 @@
       "featureElevationExpression" : "Shape.Z",
       "featureTable" : {
         "type" : "CIMFeatureTable",
-        "definitionExpression" : "Status IN ('Complete', 'Current', 'Under Construction')",
+        "definitionExpression" : "Status IN ('Current', 'Under Construction', 'Construction Complete', 'Complete') And StructType NOT IN ('Dock', 'Wall')",
         "definitionExpressionName" : "Query 1",
         "definitionFilterChoices" : [
           {
             "type" : "CIMDefinitionFilter",
             "name" : "Query 1",
-            "definitionExpression" : "Status IN ('Complete', 'Current', 'Under Construction')"
+            "definitionExpression" : "Status IN ('Current', 'Under Construction', 'Construction Complete', 'Complete') And StructType NOT IN ('Dock', 'Wall')"
           }
         ],
         "displayField" : "Name",
@@ -514,34 +436,38 @@
             "type" : "CIMFieldDescription",
             "alias" : "RecInitUser",
             "fieldName" : "RecInitUser",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           },
           {
             "type" : "CIMFieldDescription",
             "alias" : "RecInitDt",
             "fieldName" : "RecInitDt",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           },
           {
             "type" : "CIMFieldDescription",
             "alias" : "RecModUser",
             "fieldName" : "RecModUser",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           },
           {
             "type" : "CIMFieldDescription",
             "alias" : "RecModDt",
             "fieldName" : "RecModDt",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           }
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_Existing_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -570,7 +496,7 @@
         },
         {
           "type" : "CIMMultipatchFeatureTemplate",
-          "name" : "Complete",
+          "name" : "Construction Complete",
           "tags" : "MultiPatch",
           "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
           "toolFilter" : [
@@ -582,7 +508,7 @@
             "type" : "PropertySet",
             "propertySetItems" : [
               "status",
-              "Complete"
+              "Construction Complete"
             ]
           }
         },
@@ -921,7 +847,8 @@
               },
               {
                 "type" : "CIMUniqueValueClass",
-                "label" : "Complete",
+                "editable" : true,
+                "label" : "Construction Complete",
                 "patch" : "Default",
                 "symbol" : {
                   "type" : "CIMSymbolReference",
@@ -962,7 +889,7 @@
                   {
                     "type" : "CIMUniqueValue",
                     "fieldValues" : [
-                      "Complete"
+                      "Construction Complete"
                     ]
                   }
                 ],
@@ -1018,25 +945,28 @@
                 "visible" : true
               }
             ],
-            "heading" : "Model Status"
+            "heading" : "Status"
           }
         ],
         "polygonSymbolColorTarget" : "Fill"
       },
       "scaleSymbols" : true,
-      "snappable" : true
+      "snappable" : true,
+      "symbolLayerDrawing" : {
+        "type" : "CIMSymbolLayerDrawing"
+      }
     },
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_Existing Demo Candidates DQV",
-      "uRI" : "CIMPATH=scene/bos3d_existing_demo_candidates_dqv.xml",
+      "uRI" : "CIMPATH=scene/bos3d_active_demo_candidates_dqv.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
       },
-      "metadataURI" : "CIMPATH=Metadata/ea2dc02c0c280d942149338f002986c8.xml",
-      "useSourceMetadata" : false,
-      "description" : "Bos3d_DevPipeline_MP",
+      "metadataURI" : "CIMPATH=Metadata/6e1478ef56389136ec5b5e86d6896d33.xml",
+      "useSourceMetadata" : true,
+      "description" : "Bos3d_Active_MP",
       "layerElevation" : {
         "type" : "CIMLayerElevationSurface"
       },
@@ -1065,84 +995,6 @@
       "visibility" : false,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
-      "popupInfo" : {
-        "type" : "CIMPopupInfo",
-        "title" : "{Name}",
-        "expressionInfos" : [
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.ProjectLnk)), \"none\", \"block\");",
-            "name" : "hasProjLink",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.Model_Note)), \"none\", \"block\");",
-            "name" : "hasNote",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.Model_Cred)), \"none\", \"block\");",
-            "name" : "hasCred",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "var fieldInfos = []\n\nif (!IsEmpty (Trim($feature.ProjectLnk))) {\n    Push (fieldInfos, {fieldName: 'ProjectLnk', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.Model_Cred))) {\n    Push (fieldInfos, {fieldName: 'Model_Cred', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.GoogleLnk))) {\n    Push (fieldInfos, {fieldName: '$feature.GoogleLnk', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.Model_Note))) {\n    Push (fieldInfos, {fieldName: 'Model_Note', label: 'Component'})\n\n};\nreturn {\n    type: 'fields',\n    Status: $feature.Status,\n    fieldInfos: fieldInfos,\n    attributes: {\n        'ProjectLnk': $feature.ProjectLnk,\n        'Model_Cred': $feature.Model_Cred,\n        'Model_Note': $feature.Model_Note\n    }\n}",
-            "name" : "WriteAtts",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.Parcel_Lnk)), \"none\", \"block\");",
-            "name" : "hasParcel_lnk",
-            "returnType" : "String"
-          }
-        ],
-        "mediaInfos" : [
-          {
-            "type" : "CIMTextMediaInfo",
-            "refreshRateUnit" : "esriTimeUnitsSeconds",
-            "rowSpan" : 1,
-            "columnSpan" : 1,
-            "text" : "<p style='padding-bottom: 2px; border-bottom: 1px solid lightgray;'><b>Model Status:</b> {Status} </p>\n<p style='display:{expression/hasNote};margin-top: 1px; padding-bottom: 1px; border-bottom: 1px solid lightgray;'>Note: {Model_Note}</p>\n<p style='display:{expression/hasprojLink};padding-bottom: 2px; border-bottom: 1px solid lightgray;'><a href=\"{ProjectLnk}\" target=\"_blank\" rel=\"nofollow\">View Project Page at BostonPlans.com</a></p>\n<p style='padding-bottom: 1px; border-bottom: 1px solid lightgray;'><a href=\"{GoogleLnk}\" target=\"_blank\" rel=\"nofollow\">View in Google Maps 3D</a></p>\n<p style='display:{expression/hasParcel_Lnk}; padding-bottom: 2px; border-bottom: 1px solid lightgray;'><a href=\"{Parcel_Lnk}\" target=\"_blank\" rel=\"nofollow\">View Property Assessor's Map</a></p>\n<p style='display:{expression/hasCred};'><b>Model Credit:</b> {Model_Cred}</p>\n<p style='font-size: 10px; padding-bottom: 1px; border-top: 1px solid gray;'><b><a href=\"https://maps.bostonplans.org/3d/Bos3d_Tiled_Data/Bos3d_ModelCollection_OBJ/{Tile_ID}_ModelCollection_OBJ/{Model_ID}_OBJ.zip\" target=\"_blank\" rel=\"nofollow\">Download Model in .OBJ Format</a></b></p>"
-          }
-        ],
-        "gridLayout" : {
-          "type" : "CIMPopupLayout",
-          "columnWidths" : [
-            100
-          ],
-          "borderWidth" : 0,
-          "borderColor" : {
-            "type" : "CIMRGBColor",
-            "values" : [
-              0,
-              0,
-              0,
-              100
-            ]
-          }
-        },
-        "fieldDescriptions" : [
-          {
-            "type" : "CIMPopupFieldDescription",
-            "alias" : "Name: ",
-            "fieldName" : "Name"
-          },
-          {
-            "type" : "CIMPopupFieldDescription",
-            "alias" : "View Project Web Page: ",
-            "fieldName" : "ProjectLnk"
-          }
-        ]
-      },
       "showPopups" : true,
       "serviceLayerID" : -1,
       "refreshRate" : -1,
@@ -1153,13 +1005,13 @@
       "featureElevationExpression" : "Shape.Z",
       "featureTable" : {
         "type" : "CIMFeatureTable",
-        "definitionExpression" : "Status IN ('Approved Demo')",
+        "definitionExpression" : "Status IN ('Permitted Demo', 'Approved Demo') And StructType IN ('Bridge', 'Building')",
         "definitionExpressionName" : "Query 1",
         "definitionFilterChoices" : [
           {
             "type" : "CIMDefinitionFilter",
             "name" : "Query 1",
-            "definitionExpression" : "Status IN ('Approved Demo')"
+            "definitionExpression" : "Status IN ('Permitted Demo', 'Approved Demo') And StructType IN ('Bridge', 'Building')"
           }
         ],
         "displayField" : "Name",
@@ -1534,34 +1386,38 @@
             "type" : "CIMFieldDescription",
             "alias" : "RecInitUser",
             "fieldName" : "RecInitUser",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           },
           {
             "type" : "CIMFieldDescription",
             "alias" : "RecInitDt",
             "fieldName" : "RecInitDt",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           },
           {
             "type" : "CIMFieldDescription",
             "alias" : "RecModUser",
             "fieldName" : "RecModUser",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           },
           {
             "type" : "CIMFieldDescription",
             "alias" : "RecModDt",
             "fieldName" : "RecModDt",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           }
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_Existing_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -1585,6 +1441,24 @@
             "propertySetItems" : [
               "status",
               "Approved Demo"
+            ]
+          }
+        },
+        {
+          "type" : "CIMMultipatchFeatureTemplate",
+          "name" : "Permitted Demo",
+          "tags" : "MultiPatch",
+          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
+          "toolFilter" : [
+            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
+            "d40bc750-9513-4adc-bd08-35f67eb39051",
+            "d755d802-c38c-40b6-ab20-71679d95b280"
+          ],
+          "defaultValues" : {
+            "type" : "PropertySet",
+            "propertySetItems" : [
+              "status",
+              "Permitted Demo"
             ]
           }
         }
@@ -1856,6 +1730,7 @@
             "classes" : [
               {
                 "type" : "CIMUniqueValueClass",
+                "editable" : true,
                 "label" : "Approved Demo",
                 "patch" : "Default",
                 "symbol" : {
@@ -1902,27 +1777,80 @@
                   }
                 ],
                 "visible" : true
+              },
+              {
+                "type" : "CIMUniqueValueClass",
+                "editable" : true,
+                "label" : "Permitted Demo",
+                "patch" : "Default",
+                "symbol" : {
+                  "type" : "CIMSymbolReference",
+                  "symbol" : {
+                    "type" : "CIMMeshSymbol",
+                    "symbolLayers" : [
+                      {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMHSVColor",
+                          "values" : [
+                            51.729999999999997,
+                            14.5,
+                            78.430000000000007,
+                            100
+                          ]
+                        }
+                      },
+                      {
+                        "type" : "CIMMaterialSymbolLayer",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMHSLColor",
+                          "values" : [
+                            357.49000000000001,
+                            81.25,
+                            86.159999999999997,
+                            100
+                          ]
+                        },
+                        "materialMode" : "Multiply"
+                      }
+                    ]
+                  }
+                },
+                "values" : [
+                  {
+                    "type" : "CIMUniqueValue",
+                    "fieldValues" : [
+                      "Permitted Demo"
+                    ]
+                  }
+                ],
+                "visible" : true
               }
             ],
-            "heading" : "Model Status"
+            "heading" : "Status"
           }
         ],
         "polygonSymbolColorTarget" : "Fill"
       },
       "scaleSymbols" : true,
-      "snappable" : true
+      "snappable" : true,
+      "symbolLayerDrawing" : {
+        "type" : "CIMSymbolLayerDrawing"
+      }
     },
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_Approved",
-      "uRI" : "CIMPATH=scene/bos3d_approved.xml",
+      "uRI" : "CIMPATH=scene/bos3d_proposed.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
       },
-      "metadataURI" : "CIMPATH=Metadata/ea2dc02c0c280d942149338f002986c8.xml",
-      "useSourceMetadata" : false,
-      "description" : "Bos3d_DevPipeline_MP",
+      "metadataURI" : "CIMPATH=Metadata/e153e8e1ac4e664f8970efc791128140.xml",
+      "useSourceMetadata" : true,
+      "description" : "Bos3d_Proposed_MP",
       "layerElevation" : {
         "type" : "CIMLayerElevationSurface"
       },
@@ -1948,87 +1876,9 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
-      "popupInfo" : {
-        "type" : "CIMPopupInfo",
-        "title" : "{Name}",
-        "expressionInfos" : [
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.ProjectLnk)), \"none\", \"block\");",
-            "name" : "hasProjLink",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.Model_Note)), \"none\", \"block\");",
-            "name" : "hasNote",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.Model_Cred)), \"none\", \"block\");",
-            "name" : "hasCred",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "var fieldInfos = []\n\nif (!IsEmpty (Trim($feature.ProjectLnk))) {\n    Push (fieldInfos, {fieldName: 'ProjectLnk', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.Model_Cred))) {\n    Push (fieldInfos, {fieldName: 'Model_Cred', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.GoogleLnk))) {\n    Push (fieldInfos, {fieldName: '$feature.GoogleLnk', label: 'Component'})\n};\n\nif (!IsEmpty (Trim($feature.Model_Note))) {\n    Push (fieldInfos, {fieldName: 'Model_Note', label: 'Component'})\n\n};\nreturn {\n    type: 'fields',\n    Status: $feature.Status,\n    fieldInfos: fieldInfos,\n    attributes: {\n        'ProjectLnk': $feature.ProjectLnk,\n        'Model_Cred': $feature.Model_Cred,\n        'Model_Note': $feature.Model_Note\n    }\n}",
-            "name" : "WriteAtts",
-            "returnType" : "String"
-          },
-          {
-            "type" : "CIMExpressionInfo",
-            "title" : "Custom",
-            "expression" : "IIF (IsEmpty(Trim($feature.Parcel_Lnk)), \"none\", \"block\");",
-            "name" : "hasParcel_lnk",
-            "returnType" : "String"
-          }
-        ],
-        "mediaInfos" : [
-          {
-            "type" : "CIMTextMediaInfo",
-            "refreshRateUnit" : "esriTimeUnitsSeconds",
-            "rowSpan" : 1,
-            "columnSpan" : 1,
-            "text" : "<p style='padding-bottom: 2px; border-bottom: 1px solid lightgray;'><b>Model Status:</b> {Status} </p>\n<p style='display:{expression/hasNote};margin-top: 1px; padding-bottom: 1px; border-bottom: 1px solid lightgray;'>Note: {Model_Note}</p>\n<p style='display:{expression/hasprojLink};padding-bottom: 2px; border-bottom: 1px solid lightgray;'><a href=\"{ProjectLnk}\" target=\"_blank\" rel=\"nofollow\">View Project Page at BostonPlans.com</a></p>\n<p style='padding-bottom: 1px; border-bottom: 1px solid lightgray;'><a href=\"{GoogleLnk}\" target=\"_blank\" rel=\"nofollow\">View in Google Maps 3D</a></p>\n<p style='display:{expression/hasParcel_Lnk}; padding-bottom: 2px; border-bottom: 1px solid lightgray;'><a href=\"{Parcel_Lnk}\" target=\"_blank\" rel=\"nofollow\">View Property Assessor's Map</a></p>\n<p style='display:{expression/hasCred};'><b>Model Credit:</b> {Model_Cred}</p>\n<p style='font-size: 10px; padding-bottom: 1px; border-top: 1px solid gray;'><b><a href=\"https://maps.bostonplans.org/3d/Bos3d_Tiled_Data/Bos3d_ModelCollection_OBJ/{Tile_ID}_ModelCollection_OBJ/{Model_ID}_OBJ.zip\" target=\"_blank\" rel=\"nofollow\">Download Model in .OBJ Format</a></b></p>"
-          }
-        ],
-        "gridLayout" : {
-          "type" : "CIMPopupLayout",
-          "columnWidths" : [
-            100
-          ],
-          "borderWidth" : 0,
-          "borderColor" : {
-            "type" : "CIMRGBColor",
-            "values" : [
-              0,
-              0,
-              0,
-              100
-            ]
-          }
-        },
-        "fieldDescriptions" : [
-          {
-            "type" : "CIMPopupFieldDescription",
-            "alias" : "Name: ",
-            "fieldName" : "Name"
-          },
-          {
-            "type" : "CIMPopupFieldDescription",
-            "alias" : "View Project Web Page: ",
-            "fieldName" : "ProjectLnk"
-          }
-        ]
-      },
       "showPopups" : true,
       "serviceLayerID" : -1,
       "refreshRate" : -1,
@@ -2039,15 +1889,6 @@
       "featureElevationExpression" : "Shape.Z",
       "featureTable" : {
         "type" : "CIMFeatureTable",
-        "definitionExpression" : "Status = 'Board Approved'",
-        "definitionExpressionName" : "Query 1",
-        "definitionFilterChoices" : [
-          {
-            "type" : "CIMDefinitionFilter",
-            "name" : "Query 1",
-            "definitionExpression" : "Status = 'Board Approved'"
-          }
-        ],
         "displayField" : "Name",
         "editable" : true,
         "fieldDescriptions" : [
@@ -2420,34 +2261,38 @@
             "type" : "CIMFieldDescription",
             "alias" : "RecInitUser",
             "fieldName" : "RecInitUser",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           },
           {
             "type" : "CIMFieldDescription",
             "alias" : "RecInitDt",
             "fieldName" : "RecInitDt",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           },
           {
             "type" : "CIMFieldDescription",
             "alias" : "RecModUser",
             "fieldName" : "RecModUser",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           },
           {
             "type" : "CIMFieldDescription",
             "alias" : "RecModDt",
             "fieldName" : "RecModDt",
-            "visible" : false,
+            "readOnly" : true,
+            "visible" : true,
             "searchMode" : "Exact"
           }
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_Approved_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -2456,6 +2301,24 @@
         "searchOrder" : "esriSearchOrderSpatial"
       },
       "featureTemplates" : [
+        {
+          "type" : "CIMMultipatchFeatureTemplate",
+          "name" : "Permitted",
+          "tags" : "MultiPatch",
+          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
+          "toolFilter" : [
+            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
+            "d40bc750-9513-4adc-bd08-35f67eb39051",
+            "d755d802-c38c-40b6-ab20-71679d95b280"
+          ],
+          "defaultValues" : {
+            "type" : "PropertySet",
+            "propertySetItems" : [
+              "status",
+              "Permitted"
+            ]
+          }
+        },
         {
           "type" : "CIMMultipatchFeatureTemplate",
           "name" : "Board Approved",
@@ -2742,6 +2605,57 @@
             "classes" : [
               {
                 "type" : "CIMUniqueValueClass",
+                "editable" : true,
+                "label" : "Permitted",
+                "patch" : "Default",
+                "symbol" : {
+                  "type" : "CIMSymbolReference",
+                  "symbol" : {
+                    "type" : "CIMMeshSymbol",
+                    "symbolLayers" : [
+                      {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            163,
+                            255,
+                            115,
+                            100
+                          ]
+                        }
+                      },
+                      {
+                        "type" : "CIMMaterialSymbolLayer",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            211,
+                            255,
+                            190,
+                            100
+                          ]
+                        },
+                        "materialMode" : "Multiply"
+                      }
+                    ]
+                  }
+                },
+                "values" : [
+                  {
+                    "type" : "CIMUniqueValue",
+                    "fieldValues" : [
+                      "Permitted"
+                    ]
+                  }
+                ],
+                "visible" : true
+              },
+              {
+                "type" : "CIMUniqueValueClass",
+                "editable" : true,
                 "label" : "Board Approved",
                 "patch" : "Default",
                 "symbol" : {
@@ -2790,18 +2704,21 @@
                 "visible" : true
               }
             ],
-            "heading" : "Model Status"
+            "heading" : "Status"
           }
         ],
         "polygonSymbolColorTarget" : "Fill"
       },
       "scaleSymbols" : true,
-      "snappable" : true
+      "snappable" : true,
+      "symbolLayerDrawing" : {
+        "type" : "CIMSymbolLayerDrawing"
+      }
     },
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_Internal_Active DQV",
-      "uRI" : "CIMPATH=scene/bos3d_internal_active_dqv2.xml",
+      "uRI" : "CIMPATH=scene/bos3d_internal_active_dqv.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -3259,7 +3176,7 @@
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_Internal_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -3750,7 +3667,7 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_Internal_Inactive DQV",
-      "uRI" : "CIMPATH=scene/bos3d_internal_inactive_dqv2.xml",
+      "uRI" : "CIMPATH=scene/bos3d_internal_inactive_dqv.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -4208,7 +4125,7 @@
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_Internal_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -4702,7 +4619,7 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_History_MP",
-      "uRI" : "CIMPATH=scene/bos3d_history_mp2.xml",
+      "uRI" : "CIMPATH=scene/bos3d_history_mp4.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -5172,7 +5089,7 @@
         },
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_History_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -5595,7 +5512,7 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_Retired_MP",
-      "uRI" : "CIMPATH=scene/bos3d_retired_mp2.xml",
+      "uRI" : "CIMPATH=scene/bos3d_retired_mp4.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -6044,7 +5961,7 @@
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_Retired_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -6399,7 +6316,7 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_Alt_MP",
-      "uRI" : "CIMPATH=scene/bos3d_alt_mp2.xml",
+      "uRI" : "CIMPATH=scene/bos3d_alt_mp4.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -6848,7 +6765,7 @@
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_Alt_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -7190,7 +7107,7 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_WallsDocks_MP",
-      "uRI" : "CIMPATH=scene/bos3d_wallsdocks_mp.xml",
+      "uRI" : "CIMPATH=scene/bos3d_wallsdocks_mp3.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -7223,7 +7140,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -7648,7 +7565,7 @@
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_Existing_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -8046,7 +7963,7 @@
     {
       "type" : "CIMFeatureLayer",
       "name" : "Issue_Points",
-      "uRI" : "CIMPATH=scene/issue_points3.xml",
+      "uRI" : "CIMPATH=scene/issue_points5.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -8080,7 +7997,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : false,
+      "visibility" : true,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "showPopups" : true,
@@ -8169,7 +8086,7 @@
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\PriorArchive\\Bos3d_Models_Demo_20220307_Migrated\\Bos3d_Models_Demo_20220307.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Issue_Points",
           "datasetType" : "esriDTFeatureClass"
@@ -8447,7 +8364,7 @@
                                 2
                               ],
                               [
-                                6.6030623875207053e-16,
+                                5.7416924596968218e-16,
                                 0
                               ],
                               0,
@@ -8510,8 +8427,8 @@
     },
     {
       "type" : "CIMGroupLayer",
-      "name" : "Next Edition LayerDemo",
-      "uRI" : "CIMPATH=scene/prior_archived_layerdemo.xml",
+      "name" : "Prior Archived LayerDemo",
+      "uRI" : "CIMPATH=scene/next_edition_20211224_layerdemo.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
@@ -8521,6 +8438,7 @@
       "layerElevation" : {
         "type" : "CIMLayerElevationSurface"
       },
+      "expanded" : true,
       "layer3DProperties" : {
         "type" : "CIM3DLayerProperties",
         "castShadows" : true,
@@ -8548,16 +8466,16 @@
       "blendingMode" : "Alpha",
       "allowDrapingOnIntegratedMesh" : true,
       "layers" : [
-        "CIMPATH=scene/bos3d_existing_stable_dqv.xml",
-        "CIMPATH=scene/bos3d_existing_demo_candidates_dqv.xml",
-        "CIMPATH=scene/bos3d_approved.xml",
-        "CIMPATH=scene/bos3d_internal_active_dqv2.xml",
-        "CIMPATH=scene/bos3d_internal_inactive_dqv2.xml",
-        "CIMPATH=scene/bos3d_history_mp2.xml",
-        "CIMPATH=scene/bos3d_retired_mp2.xml",
-        "CIMPATH=scene/bos3d_alt_mp2.xml",
-        "CIMPATH=scene/bos3d_wallsdocks_mp.xml",
-        "CIMPATH=scene/issue_points3.xml"
+        "CIMPATH=scene/bos3d_active_stable_dqv2.xml",
+        "CIMPATH=scene/bos3d_active_demo_candidates_dqv.xml",
+        "CIMPATH=scene/bos3d_proposed.xml",
+        "CIMPATH=scene/bos3d_internal_active_dqv.xml",
+        "CIMPATH=scene/bos3d_internal_inactive_dqv.xml",
+        "CIMPATH=scene/bos3d_history_mp4.xml",
+        "CIMPATH=scene/bos3d_retired_mp4.xml",
+        "CIMPATH=scene/bos3d_alt_mp4.xml",
+        "CIMPATH=scene/bos3d_wallsdocks_mp3.xml",
+        "CIMPATH=scene/issue_points5.xml"
       ]
     }
   ],
@@ -8589,6 +8507,11 @@
     },
     {
       "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/6e1478ef56389136ec5b5e86d6896d33.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20210528</CreaDate><CreaTime>15014900</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Bos3d_Active_MP</resTitle></idCitation><idAbs>Bos3d_Active_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
       "uRI" : "CIMPATH=Metadata/8e34552b919464053252b5d73007a26c.xml",
       "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20210819</CreaDate><CreaTime>14500700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Issue_Points</resTitle></idCitation><idAbs>Issue_Points</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
     },
@@ -8599,8 +8522,8 @@
     },
     {
       "type" : "CIMBinaryReference",
-      "uRI" : "CIMPATH=Metadata/ea2dc02c0c280d942149338f002986c8.xml",
-      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220522</CreaDate><CreaTime>11203400</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Development Pipeline</resTitle></idCitation><searchKeys/><idPurp></idPurp><idAbs>&lt;DIV STYLE=\"text-align:Left;font-size:12pt\"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Created to portray the features in the development pipeline for ArcGIS Pro.  The DevPipeline feature class includes models that have a status of Under Review or Approved.  &lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs><idCredit></idCredit><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
+      "uRI" : "CIMPATH=Metadata/e153e8e1ac4e664f8970efc791128140.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20210528</CreaDate><CreaTime>15014900</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Bos3d_Proposed_MP</resTitle></idCitation><idAbs>Bos3d_Proposed_MP</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
     },
     {
       "type" : "CIMBinaryReference",
