@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, August 30, 2022 9:38:40 AM</msg><msg code="0" type="1">Executing (Calculate Field (2)): CalculateField Sketch_MP Model_ID ""BOS_" + id_generator()" PYTHON "import string
+import random
+def id_generator(size=7, chars=string.ascii_uppercase + string.digits):
+    return ''.join(random.SystemRandom().choice(chars) for _ in range(size))" Text NO_ENFORCE_DOMAINS</msg><msg code="0" type="2">Start Time: Tuesday, August 30, 2022 9:38:40 AM</msg><msg code="0" type="3">Succeeded at Tuesday, August 30, 2022 9:38:41 AM (Elapsed Time: 0.76 seconds)</msg><msg code="0" type="3">Succeeded at Tuesday, August 30, 2022 9:38:41 AM (Elapsed Time: 0.91 seconds)</msg></messages>

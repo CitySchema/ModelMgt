@@ -1,15 +1,15 @@
 {
   "type" : "CIMLayerDocument",
-  "version" : "2.9.0",
-  "build" : 32739,
+  "version" : "3.0.0",
+  "build" : 36056,
   "layers" : [
-    "CIMPATH=scene/issue_points6.xml"
+    "CIMPATH=lod_1_5_3d_scene/issue_points.json"
   ],
   "layerDefinitions" : [
     {
       "type" : "CIMFeatureLayer",
       "name" : "Issue_Points",
-      "uRI" : "CIMPATH=scene/issue_points6.xml",
+      "uRI" : "CIMPATH=lod_1_5_3d_scene/issue_points.json",
       "sourceModifiedTime" : {
         "type" : "TimeInstant"
       },
@@ -18,7 +18,7 @@
       "description" : "Issue_Points",
       "layerElevation" : {
         "type" : "CIMLayerElevationSurface",
-        "mapElevationID" : "{AC8F5281-8602-42DD-A487-8FF3B366A758}"
+        "elevationSurfaceLayerURI" : "CIMPATH=Scene3/d7e0ac8d9e584fdabe20da875e67576a.json"
       },
       "expanded" : true,
       "layer3DProperties" : {
@@ -73,7 +73,7 @@
         "editable" : true,
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\..\\ModelMgt_20201214\\Stage\\Stage.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\Stage\\Stage.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Issue_Points",
           "datasetType" : "esriDTFeatureClass"
@@ -83,10 +83,10 @@
       },
       "featureTemplates" : [
         {
-          "type" : "CIMFeatureTemplate",
+          "type" : "CIMRowTemplate",
           "name" : "Issue_Points",
           "tags" : "Point",
-          "toolProgID" : "2a8b3331-5238-4025-972e-452a69535b06"
+          "defaultToolGUID" : "2a8b3331-5238-4025-972e-452a69535b06"
         }
       ],
       "htmlPopupEnabled" : true,
@@ -420,52 +420,36 @@
       "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20220307</CreaDate><CreaTime>15174700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Issue_Points</resTitle></idCitation><idAbs>Issue_Points</idAbs><idCredit></idCredit><idPurp></idPurp><resConst><Consts><useLimit></useLimit></Consts></resConst></dataIdInfo></metadata>\r\n"
     }
   ],
-  "elevationSurfaces" : [
+  "rGBColorProfile" : "sRGB IEC61966-2.1",
+  "cMYKColorProfile" : "U.S. Web Coated (SWOP) v2",
+  "elevationSurfaceLayerDefinitions" : [
     {
-      "type" : "CIMMapElevationSurface",
-      "baseSources" : [
-        {
-          "type" : "CIMElevationSource",
-          "dataConnection" : {
-            "type" : "CIMStandardDataConnection",
-            "workspaceConnectionString" : "DATABASE=..\\..\\Sources\\Terrains",
-            "workspaceFactory" : "Raster",
-            "dataset" : "dem_3ft_square_clip.tif",
-            "datasetType" : "esriDTAny"
-          },
-          "verticalUnit" : {
-            "uwkid" : 9003
-          },
-          "visibility" : true,
-          "name" : "dem_3ft_square_clip.tif",
-          "elevationSourceID" : "2422367b538d4b2e80846b6b2399d8b80"
-        },
-        {
-          "type" : "CIMElevationSource",
-          "dataConnection" : {
-            "type" : "CIMAGSServiceConnection",
-            "objectName" : "WorldElevation3D/Terrain3D",
-            "objectType" : "ImageServer",
-            "url" : "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer",
-            "serverConnection" : {
-              "type" : "CIMInternetServerConnection",
-              "anonymous" : true,
-              "hideUserProperty" : true,
-              "url" : "https://elevation3d.arcgis.com/arcgis/services"
-            }
-          },
-          "verticalUnit" : {
-            "uwkid" : 9001
-          },
-          "visibility" : true,
-          "name" : "WorldElevation3D/Terrain3D",
-          "elevationSourceID" : "506adc9cfa60cb983ae8715f8f3c9c3400"
-        }
+      "type" : "CIMElevationSurfaceLayer",
+      "name" : "Ground",
+      "uRI" : "CIMPATH=Scene3/d7e0ac8d9e584fdabe20da875e67576a.json",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant"
+      },
+      "useSourceMetadata" : true,
+      "description" : "Ground",
+      "expanded" : true,
+      "layerType" : "Operational",
+      "showLegends" : false,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "refreshRate" : -1,
+      "refreshRateUnit" : "esriTimeUnitsSeconds",
+      "blendingMode" : "Alpha",
+      "allowDrapingOnIntegratedMesh" : true,
+      "elevationSourceLayers" : [
+        "CIMPATH=scene3/nearmap_dsm_2022_50cm_tif.json",
+        "CIMPATH=scene3/worldelevation3d_terrain3d.json"
       ],
       "elevationMode" : "BaseGlobeSurface",
-      "name" : "Ground",
       "verticalExaggeration" : 1,
-      "mapElevationID" : "{AC8F5281-8602-42DD-A487-8FF3B366A758}",
       "color" : {
         "type" : "CIMRGBColor",
         "values" : [
@@ -475,11 +459,473 @@
           100
         ]
       },
-      "surfaceTINShadingMode" : "Smooth",
+      "surfaceTINShadingMode" : "Smooth"
+    },
+    {
+      "type" : "CIMRasterLayer",
+      "name" : "nearmap_dsm_2022_50cm.tif",
+      "uRI" : "CIMPATH=scene3/nearmap_dsm_2022_50cm_tif.json",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant"
+      },
+      "metadataURI" : "CIMPATH=Metadata/2864a1b8cb1f31ea4f312b2187b1f2d8.xml",
+      "useSourceMetadata" : true,
+      "description" : "nearmap_dsm_2022_50cm.tif",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "elevationSurfaceLayerURI" : "CIMPATH=Scene3/d7e0ac8d9e584fdabe20da875e67576a.json"
+      },
+      "expanded" : true,
+      "layer3DProperties" : {
+        "type" : "CIM3DLayerProperties",
+        "castShadows" : true,
+        "isLayerLit" : true,
+        "layerFaceCulling" : "None",
+        "maxDistance" : -1,
+        "minDistance" : -1,
+        "preloadTextureCutoffHigh" : 0,
+        "preloadTextureCutoffLow" : 0.25,
+        "textureCutoffHigh" : 0.25,
+        "textureCutoffLow" : 1,
+        "useCompressedTextures" : true,
+        "verticalExaggeration" : 1,
+        "exaggerationMode" : "ScaleZ",
+        "verticalUnit" : {
+          "uwkid" : 9001
+        },
+        "lighting" : "OneSideDataNormal",
+        "optimizeMarkerTransparency" : true
+      },
+      "layerType" : "Operational",
+      "showLegends" : true,
+      "visibility" : false,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "refreshRate" : -1,
+      "refreshRateUnit" : "esriTimeUnitsSeconds",
+      "blendingMode" : "Alpha",
+      "allowDrapingOnIntegratedMesh" : true,
+      "dataConnection" : {
+        "type" : "CIMStandardDataConnection",
+        "workspaceConnectionString" : "DATABASE=..\\..\\Sources\\nearmap\\nearmap_2022_dsm",
+        "workspaceFactory" : "Raster",
+        "dataset" : "nearmap_dsm_2022_50cm.tif",
+        "datasetType" : "esriDTAny"
+      },
+      "colorizer" : {
+        "type" : "CIMRasterStretchColorizer",
+        "resamplingType" : "NearestNeighbor",
+        "noDataColor" : {
+          "type" : "CIMRGBColor",
+          "values" : [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "backgroundColor" : {
+          "type" : "CIMRGBColor",
+          "values" : [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "colorRamp" : {
+          "type" : "CIMPolarContinuousColorRamp",
+          "colorSpace" : {
+            "type" : "CIMICCColorSpace",
+            "url" : "Default RGB"
+          },
+          "fromColor" : {
+            "type" : "CIMHSVColor",
+            "values" : [
+              -1,
+              0,
+              0,
+              100
+            ]
+          },
+          "toColor" : {
+            "type" : "CIMHSVColor",
+            "values" : [
+              -1,
+              0,
+              100,
+              100
+            ]
+          },
+          "interpolationSpace" : "HSV",
+          "polarDirection" : "Auto"
+        },
+        "colorScheme" : "Black to White",
+        "customStretchMax" : 1,
+        "gammaValue" : 1,
+        "maxPercent" : 0.5,
+        "minPercent" : 0.5,
+        "standardDeviationParam" : 2,
+        "statsType" : "Dataset",
+        "stretchClasses" : [
+          {
+            "type" : "CIMRasterStretchClass",
+            "label" : "-23.6347",
+            "value" : -23.634677886963001
+          },
+          {
+            "type" : "CIMRasterStretchClass",
+            "value" : 44.711797714233498
+          },
+          {
+            "type" : "CIMRasterStretchClass",
+            "label" : "113.058",
+            "value" : 113.05827331543
+          }
+        ],
+        "stretchStats" : {
+          "type" : "StatsHistogram",
+          "min" : -23.634677886963001,
+          "max" : 113.05827331543,
+          "mean" : 15.615708082115001,
+          "stddev" : 15.640971071238001,
+          "limitMin" : -23.634677886962891,
+          "limitMax" : 113.0582733154297,
+          "histogram" : [
+            18229774493956,
+            22787218117445,
+            31902105364423,
+            4557443623489,
+            36459548987912,
+            41016992611401,
+            22787218117445,
+            27344661740934,
+            45574436234890,
+            18229774493956,
+            41016992611401,
+            31902105364423,
+            36459548987912,
+            59246767105357,
+            13672330870467,
+            50131879858379,
+            0,
+            27344661740934,
+            9114887246978,
+            9114887246978,
+            4557443623489,
+            18229774493956,
+            31902105364423,
+            36459548987912,
+            54689323481868,
+            177740301316071,
+            341808271761675,
+            505876242207279,
+            483089024089834,
+            574237896559614,
+            688173987146839,
+            756535641499174,
+            929718499191756,
+            1198607672977607,
+            1613335042715106,
+            2178458052027742,
+            2734466174093400,
+            3504674146463041,
+            5300306934117707,
+            7857032806895036,
+            11357149509734588,
+            14355947413990350,
+            20207705026550224,
+            62591930724997928,
+            148276428290214624,
+            248389792367397472,
+            535052996284855552,
+            597271216632727424,
+            561745943587630656,
+            659229662694060416,
+            397577709382309888,
+            232798777731441600,
+            157459677191544960,
+            146658535803876032,
+            150773907395886592,
+            115667919164150816,
+            115025319613238864,
+            117691424132979936,
+            119837980079643248,
+            101626435360181216,
+            94954337895393312,
+            83419448084342656,
+            76551380543744736,
+            80384190631098976,
+            71451601129060544,
+            59173848007381176,
+            55090378520735032,
+            64455925167004928,
+            88628606145990576,
+            85342689293455008,
+            80885509429682768,
+            75448479186860400,
+            77125618440304352,
+            87211241179085504,
+            112186032235805216,
+            107560226957963888,
+            121186983392196000,
+            130101343119740480,
+            126829098598075376,
+            147469760768857056,
+            115654246833280352,
+            107159171919096864,
+            118762423384499856,
+            100058674753700992,
+            92894373377576288,
+            130566202369336368,
+            94981682557134256,
+            117035152251197520,
+            83861520115821088,
+            83806830792339216,
+            80575603263285520,
+            70681393156690904,
+            61229255081574712,
+            77348933177855312,
+            62833475237042840,
+            63526206667813168,
+            51658623472247816,
+            52602014302310040,
+            60135468611937352,
+            65344626673585280,
+            66926059610935968,
+            69273143077032800,
+            72121545341713424,
+            46303627214648240,
+            41422605093891520,
+            39763695614941528,
+            47338166917180240,
+            46695567366268296,
+            36974540117366256,
+            42589310661504704,
+            42233830058872560,
+            39513036215649632,
+            41577558177090144,
+            42780723293691240,
+            39426444786803336,
+            40214882533666936,
+            35648324022930960,
+            31104552730312424,
+            34914575599549228,
+            43254697430534096,
+            55354710250897392,
+            20672564276146104,
+            25699424592854472,
+            32795364314626844,
+            41199290356340560,
+            37143165531435352,
+            20950568337178932,
+            15969282456705456,
+            14264798541520570,
+            24427897821901040,
+            28174116480409000,
+            44075037282762120,
+            15682163508425648,
+            14775232227351338,
+            9374661533516872,
+            12378016881396124,
+            11616923796273460,
+            18972637804584708,
+            14966644859537876,
+            28971669114519572,
+            8198841078656711,
+            23849102481717936,
+            30908582654502400,
+            9816733564995306,
+            4411605427537352,
+            5646672649502871,
+            10910520034632666,
+            3481886928345596,
+            3568478357191887,
+            9274397773800116,
+            5678574754867294,
+            6138876560839683,
+            6011268139381991,
+            5519064228045179,
+            5095221971060702,
+            3960418508811941,
+            2196687826521698,
+            2976010686138317,
+            1431037297775546,
+            4543771292618533,
+            4170060915492435,
+            21255917059952696,
+            12428148761254504,
+            4270324675209193,
+            3281359408912080,
+            1426479854152057,
+            1102901356884338,
+            893258950203844,
+            5181813399906993,
+            5446145130069355,
+            2141998503039830,
+            1754615795043265,
+            2666104519741065,
+            2679776850611532,
+            1585990380974172,
+            2205802713768676,
+            1157590680366206,
+            1859436998383512,
+            1130246018625272,
+            1093786469637360,
+            1554088275609749,
+            1467496846763458,
+            1089229026013871,
+            6125204229969216,
+            4397933096666885,
+            2907649031785982,
+            774765415993130,
+            619812332794504,
+            510433685830768,
+            2798270384822246,
+            423842256984477,
+            82033985222802,
+            50131879858379,
+            72919097975824,
+            31902105364423,
+            22787218117445,
+            27344661740934,
+            27344661740934,
+            13672330870467,
+            18229774493956,
+            22787218117445,
+            22787218117445,
+            9114887246978,
+            18229774493956,
+            18229774493956,
+            13672330870467,
+            13672330870467,
+            9114887246978,
+            4557443623489,
+            0,
+            4557443623489,
+            9114887246978,
+            9114887246978,
+            902373837450822,
+            2793712941198757,
+            2830172490186669,
+            437514587854944,
+            36459548987912,
+            50131879858379,
+            27344661740934,
+            18229774493956,
+            36459548987912,
+            9114887246978,
+            200527519433516,
+            3664184673285156,
+            1804747674901644,
+            565123009312636,
+            27344661740934,
+            4557443623489,
+            31902105364423,
+            22787218117445,
+            0,
+            9114887246978,
+            95706316093269,
+            4625805277841335,
+            1376347974293678,
+            597025114677059,
+            45574436234890,
+            59246767105357,
+            154953083198626,
+            264331730162362,
+            455744362348900,
+            1658909478949996,
+            3655069786038178,
+            897816393827333,
+            451186918725411,
+            82033985222802,
+            0,
+            9114887246978,
+            22787218117445,
+            9114887246978,
+            0,
+            0,
+            4557443623489,
+            0,
+            4557443623489
+          ],
+          "nsamples" : 2134817,
+          "resolution" : 0.5360507890289905
+        },
+        "stretchType" : "PercentMinimumMaximum"
+      }
+    },
+    {
+      "type" : "CIMTiledServiceLayer",
+      "name" : "WorldElevation3D/Terrain3D",
+      "uRI" : "CIMPATH=scene3/worldelevation3d_terrain3d.json",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant"
+      },
+      "useSourceMetadata" : true,
+      "description" : "WorldElevation3D/Terrain3D",
+      "layer3DProperties" : {
+        "type" : "CIM3DLayerProperties",
+        "castShadows" : true,
+        "isLayerLit" : true,
+        "layerFaceCulling" : "None",
+        "preloadTextureCutoffHigh" : 0.29999999999999999,
+        "preloadTextureCutoffLow" : 0.59999999999999998,
+        "textureCutoffHigh" : 0.29999999999999999,
+        "textureCutoffLow" : 0.59999999999999998,
+        "useCompressedTextures" : true,
+        "verticalExaggeration" : 1,
+        "exaggerationMode" : "ScaleZ",
+        "verticalUnit" : {
+          "uwkid" : 9001
+        },
+        "lighting" : "OneSideDataNormal",
+        "optimizeMarkerTransparency" : true
+      },
+      "layerType" : "Operational",
+      "showLegends" : true,
       "visibility" : true,
-      "expanded" : true
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "refreshRate" : -1,
+      "refreshRateUnit" : "esriTimeUnitsSeconds",
+      "blendingMode" : "Alpha",
+      "allowDrapingOnIntegratedMesh" : true,
+      "serviceConnection" : {
+        "type" : "CIMAGSServiceConnection",
+        "description" : "BaseMap",
+        "objectName" : "WorldElevation3D/Terrain3D",
+        "objectType" : "ImageServer",
+        "url" : "https://elevation3d.arcgis.com/arcgis/services/WorldElevation3D/Terrain3D/ImageServer",
+        "serverConnection" : {
+          "type" : "CIMInternetServerConnection",
+          "anonymous" : true,
+          "hideUserProperty" : true,
+          "url" : "https://elevation3d.arcgis.com/arcgis/services"
+        }
+      },
+      "transparentColor" : {
+        "type" : "CIMRGBColor",
+        "values" : [
+          0,
+          0,
+          0,
+          100
+        ]
+      },
+      "backgroundColor" : {
+        "type" : "CIMRGBColor",
+        "values" : [
+          0,
+          0,
+          0,
+          100
+        ]
+      }
     }
-  ],
-  "rGBColorProfile" : "sRGB IEC61966-2-1 noBPC",
-  "cMYKColorProfile" : "U.S. Web Coated (SWOP) v2"
+  ]
 }
