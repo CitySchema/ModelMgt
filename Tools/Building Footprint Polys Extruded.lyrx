@@ -1,7 +1,7 @@
 {
   "type" : "CIMLayerDocument",
-  "version" : "2.9.0",
-  "build" : 32739,
+  "version" : "3.0.0",
+  "build" : 36056,
   "layers" : [
     "CIMPATH=scene/building_bottoms_polys.xml"
   ],
@@ -36,7 +36,7 @@
         "verticalExaggeration" : 1,
         "exaggerationMode" : "ScaleZ",
         "verticalUnit" : {
-          "uwkid" : 9003
+          "uwkid" : 9002
         },
         "lighting" : "OneSideDataNormal",
         "optimizeMarkerTransparency" : true
@@ -66,16 +66,16 @@
           "returnType" : "Default"
         }
       },
-      "featureElevationExpression" : "[Z_Min] - 8",
+      "featureElevationExpression" : "[MIN_Z] - 8",
       "featureTable" : {
         "type" : "CIMFeatureTable",
         "displayField" : "Name",
         "editable" : true,
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\scratch\\scratch.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\Scratch\\Scratch.gdb",
           "workspaceFactory" : "FileGDB",
-          "dataset" : "building_bottoms_polys",
+          "dataset" : "building_bottoms_poly",
           "datasetType" : "esriDTFeatureClass"
         },
         "studyAreaSpatialRel" : "esriSpatialRelUndefined",
@@ -83,11 +83,11 @@
       },
       "featureTemplates" : [
         {
-          "type" : "CIMFeatureTemplate",
+          "type" : "CIMRowTemplate",
           "name" : "Building Footprint Polys Extruded",
           "tags" : "Polygon",
-          "toolProgID" : "8f79967b-66a0-4a1c-b884-f44bc7e26921",
-          "toolFilter" : [
+          "defaultToolGUID" : "8f79967b-66a0-4a1c-b884-f44bc7e26921",
+          "excludedToolGUIDs" : [
             "0a7c16b9-1cfd-467f-8ece-6ba376192431",
             "6c6970a7-5ca9-448c-9c7d-0d716cd2ac64",
             "6f5fc612-d1ef-4d32-a2e1-18a1cb22331c",
