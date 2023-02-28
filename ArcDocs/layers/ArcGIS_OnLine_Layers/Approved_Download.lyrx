@@ -1,15 +1,15 @@
 {
   "type" : "CIMLayerDocument",
-  "version" : "2.9.0",
-  "build" : 32739,
+  "version" : "3.0.0",
+  "build" : 36057,
   "layers" : [
-    "CIMPATH=scene/bos3d_approved.xml"
+    "CIMPATH=scene/bos3d_approved2.xml"
   ],
   "layerDefinitions" : [
     {
       "type" : "CIMFeatureLayer",
       "name" : "Bos3d_Approved",
-      "uRI" : "CIMPATH=scene/bos3d_approved.xml",
+      "uRI" : "CIMPATH=scene/bos3d_approved2.xml",
       "sourceModifiedTime" : {
         "type" : "TimeInstant",
         "start" : 978307200000
@@ -42,7 +42,7 @@
       },
       "layerType" : "Operational",
       "showLegends" : true,
-      "visibility" : true,
+      "visibility" : false,
       "displayCacheType" : "Permanent",
       "maxDisplayCacheAge" : 5,
       "popupInfo" : {
@@ -541,7 +541,7 @@
         ],
         "dataConnection" : {
           "type" : "CIMStandardDataConnection",
-          "workspaceConnectionString" : "DATABASE=..\\..\\NextEdition\\Bos3d_Models_Demo_20220308\\Bos3d_Models_Demo_20220308.gdb",
+          "workspaceConnectionString" : "DATABASE=..\\..\\..\\NextEdition\\Bos3d_Models_Demo_20230228\\Bos3d_Models_Demo_20230228.gdb",
           "workspaceFactory" : "FileGDB",
           "dataset" : "Bos3d_Approved_MP",
           "datasetType" : "esriDTFeatureClass"
@@ -552,10 +552,46 @@
       "featureTemplates" : [
         {
           "type" : "CIMMultipatchFeatureTemplate",
+          "name" : "Complete",
+          "tags" : "MultiPatch",
+          "defaultToolGUID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
+          "excludedToolGUIDs" : [
+            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
+            "d40bc750-9513-4adc-bd08-35f67eb39051",
+            "d755d802-c38c-40b6-ab20-71679d95b280"
+          ],
+          "defaultValues" : {
+            "type" : "PropertySet",
+            "propertySetItems" : [
+              "status",
+              "Complete"
+            ]
+          }
+        },
+        {
+          "type" : "CIMMultipatchFeatureTemplate",
+          "name" : "Under Construction",
+          "tags" : "MultiPatch",
+          "defaultToolGUID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
+          "excludedToolGUIDs" : [
+            "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
+            "d40bc750-9513-4adc-bd08-35f67eb39051",
+            "d755d802-c38c-40b6-ab20-71679d95b280"
+          ],
+          "defaultValues" : {
+            "type" : "PropertySet",
+            "propertySetItems" : [
+              "status",
+              "Under Construction"
+            ]
+          }
+        },
+        {
+          "type" : "CIMMultipatchFeatureTemplate",
           "name" : "Board Approved",
           "tags" : "MultiPatch",
-          "toolProgID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
-          "toolFilter" : [
+          "defaultToolGUID" : "1b865ced-a3ac-4b43-a450-8ad2a92db859",
+          "excludedToolGUIDs" : [
             "0dcd092d-4621-4b4b-b65d-e39af1f0d9e7",
             "d40bc750-9513-4adc-bd08-35f67eb39051",
             "d755d802-c38c-40b6-ab20-71679d95b280"
@@ -836,6 +872,107 @@
             "classes" : [
               {
                 "type" : "CIMUniqueValueClass",
+                "editable" : true,
+                "label" : "Complete",
+                "patch" : "Default",
+                "symbol" : {
+                  "type" : "CIMSymbolReference",
+                  "symbol" : {
+                    "type" : "CIMMeshSymbol",
+                    "symbolLayers" : [
+                      {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            163,
+                            255,
+                            115,
+                            100
+                          ]
+                        }
+                      },
+                      {
+                        "type" : "CIMMaterialSymbolLayer",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            255,
+                            235,
+                            190,
+                            100
+                          ]
+                        },
+                        "materialMode" : "Multiply"
+                      }
+                    ]
+                  }
+                },
+                "values" : [
+                  {
+                    "type" : "CIMUniqueValue",
+                    "fieldValues" : [
+                      "Complete"
+                    ]
+                  }
+                ],
+                "visible" : true
+              },
+              {
+                "type" : "CIMUniqueValueClass",
+                "editable" : true,
+                "label" : "Under Construction",
+                "patch" : "Default",
+                "symbol" : {
+                  "type" : "CIMSymbolReference",
+                  "symbol" : {
+                    "type" : "CIMMeshSymbol",
+                    "symbolLayers" : [
+                      {
+                        "type" : "CIMSolidMeshEdge",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            163,
+                            255,
+                            115,
+                            100
+                          ]
+                        }
+                      },
+                      {
+                        "type" : "CIMMaterialSymbolLayer",
+                        "enable" : true,
+                        "color" : {
+                          "type" : "CIMRGBColor",
+                          "values" : [
+                            255,
+                            255,
+                            190,
+                            100
+                          ]
+                        },
+                        "materialMode" : "Multiply"
+                      }
+                    ]
+                  }
+                },
+                "values" : [
+                  {
+                    "type" : "CIMUniqueValue",
+                    "fieldValues" : [
+                      "Under Construction"
+                    ]
+                  }
+                ],
+                "visible" : true
+              },
+              {
+                "type" : "CIMUniqueValueClass",
+                "editable" : true,
                 "label" : "Board Approved",
                 "patch" : "Default",
                 "symbol" : {
@@ -884,7 +1021,7 @@
                 "visible" : true
               }
             ],
-            "heading" : "Model Status"
+            "heading" : "Status"
           }
         ],
         "polygonSymbolColorTarget" : "Fill"
