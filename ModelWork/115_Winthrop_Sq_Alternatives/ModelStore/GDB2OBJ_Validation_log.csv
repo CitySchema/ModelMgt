@@ -1,0 +1,18 @@
+﻿Name,Model_ID,count,issue_found,location_sample.x,location_sample.y,location_sample.z,repair_state,details,fme_rejection_code,_element_index
+115_Winthrop_3545_2015_RFP_Entry.obj,BOS-UTALD-3NF53-H1BLM,1,Degenerate or Corrupt Geometries,775907.8998853862,2954600.8000453115,304.76100425000186,Repaired,,,0
+115_Winthrop_3545_2015_RFP_Entry.obj,BOS-UTALD-3NF53-H1BLM,1,Degenerate or Corrupt Geometries,775924.8001140505,2954583.800079316,291.76103025001066,Repaired,,,0
+115_Winthrop_3545_2015_RFP_Entry.obj,BOS-UTALD-3NF53-H1BLM,1,Degenerate or Corrupt Geometries,775934.2000296414,2954451.3000162244,288.7610362500127,Repaired,,,0
+115_Winthrop_3545_2015_RFP_Entry.obj,BOS-UTALD-3NF53-H1BLM,1,Degenerate or Corrupt Geometries,775943.5999452174,2954517.600080475,61.76083408333943,Repaired,,,0
+115_Winthrop_3545_2015_RFP_Entry.obj,BOS-UTALD-3NF53-H1BLM,4,Degenerate or Corrupt Geometries,775907.8998853862,2954600.8000453115,304.76100425000186,Repaired,,,0
+115_Winthrop_3545_2007_RFP_Entry.obj,BOS-0PS47-NJIIQ-AFOQN,,Incorrect Surface Orientation,,,,,Miscellaneous,MISSING_PARAMETER_LIST,
+115_Winthrop_3545_2007_RFP_Entry.obj,BOS-0PS47-NJIIQ-AFOQN,1,Incorrect Surface Orientation,776044.500005886,2954422.599942386,1123.6199308333453,Not Fully Repaired,,,0
+115_Winthrop_3545_2007_RFP_Entry.obj,BOS-0PS47-NJIIQ-AFOQN,1,Incorrect Surface Orientation,776044.500005886,2954422.599942386,1123.6199308333453,Not Fully Repaired,,,0
+115_Winthrop_3545_2015_RFP_Entry.obj,BOS-UTALD-3NF53-H1BLM,,Incorrect Surface Orientation,,,,,Miscellaneous,MISSING_PARAMETER_LIST,
+115_Winthrop_3545_2015_RFP_Entry.obj,BOS-UTALD-3NF53-H1BLM,1,Incorrect Surface Orientation,775821.9000573903,2954619.8000073135,301.7610102500039,Not Fully Repaired,,,0
+115_Winthrop_3545_2015_RFP_Entry.obj,BOS-UTALD-3NF53-H1BLM,1,Incorrect Surface Orientation,775821.9000573903,2954619.8000073135,301.7610102500039,Not Fully Repaired,,,0
+115_Winthrop_Sqaure_3545_Final.obj,BOS-CD3D0-ERYRK-42SV9,,Incorrect Surface Orientation,,,,,Miscellaneous,MISSING_PARAMETER_LIST,
+115_Winthrop_Sqaure_3545_Final.obj,BOS-CD3D0-ERYRK-42SV9,1,Incorrect Surface Orientation,775778.9998807162,2954451.000148058,66.82709691667696,Not Fully Repaired,,,0
+115_Winthrop_Sqaure_3545_Final.obj,BOS-CD3D0-ERYRK-42SV9,1,Incorrect Surface Orientation,775778.9998807162,2954451.000148058,66.82709691667696,Not Fully Repaired,,,0
+75_Federal.obj,BOS-O4505-BOXQF-1JXYU,,Incorrect Surface Orientation,,,,,Miscellaneous,MISSING_PARAMETER_LIST,
+75_Federal.obj,BOS-O4505-BOXQF-1JXYU,1,Incorrect Surface Orientation,775830.7999739647,2954728.3001183867,395.500980249999,Not Fully Repaired,,,0
+75_Federal.obj,BOS-O4505-BOXQF-1JXYU,1,Incorrect Surface Orientation,775830.7999739647,2954728.3001183867,395.500980249999,Not Fully Repaired,,,0

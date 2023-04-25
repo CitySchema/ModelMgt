@@ -1,0 +1,272 @@
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|Current FME version: FME 2022.2.1.0 (20221202 - Build 22776 - WIN64)
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME\'
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|FME ArcGIS Data Interop Edition (node locked-crc)
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|Serial Number: CUB8-CJ9J-16A3
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|Permanent License.
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|Machine host name is: DESKTOP-B8NSRQR
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|OS Locale Name     : en_US
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|FME API version: '4.0 20220615'
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'F:\current_work\projects\Boston\Bos3d\Bos3dDevpbc\Workflows\ModelMgt_demo\ModelMgt\Tools\fme/'
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'Multipatch2ModelStore.fmw'
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2022.2.1.0'
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 10 64-bit  (Build 19045)
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|FME Platform: WIN64
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|System Status: 524.13 GB of disk space available in the FME temporary folder (C:\Users\pbcote\AppData\Local\Temp\wbrun_1678907216306_8628\fmetmp_3)
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|System Status: 23.90 GB of physical memory available
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|System Status: 95.62 GB of virtual memory available
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|START - ProcessID: 20620, peak process memory usage: 80040 kB, current process memory usage: 80040 kB
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME\fme.exe' `F:/current_work/projects/Boston/Bos3d/Bos3dDevpbc/Workflows/ModelMgt_demo/ModelMgt/Tools/fme\wb-xlate-1679264161630_8628' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `64353' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `64281'
+2023-03-19 18:16:38|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\pbcote\AppData\Roaming\Safe Software\FME\'
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME\datasources;C:\Users\pbcote\Documents\FME\Formats
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\pbcote\AppData\Roaming\Safe Software\FME\Packages\22776-win64\transformers;C:\Program Files\FME\transformers;C:\Users\pbcote\AppData\Roaming\Safe Software\FME\FME Store\Transformers
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\pbcote\Documents\FME\CoordinateSystems
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\pbcote\Documents\FME\CoordinateSystemExceptions
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\pbcote\Documents\FME\CoordinateSystemGridOverrides
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\pbcote\Documents\FME\CsmapTransformationExceptions
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\pbcote\Documents\FME\TransformerCategories
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|Mapping File Identifier is: Export Tiled Buildings to OBJ
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|The workspace was authored with a system encoding of 'windows-1252'. This will be the encoding used for names in this translation. Re-creating the workspace with a utf-8 system will enable FME to use utf-8 names
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: Reader Keyword is `MULTI_READER'
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: Writer Keyword is `MULTI_WRITER'
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `MULTI_WRITER_DEF'
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: Reader type is `MULTI_READER'
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `F:\current_work\projects\Boston\Bos3d\Bos3dDevpbc\Workflows\ModelMgt_demo\ModelMgt\Tools\fme'
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Users\pbcote\AppData\Local\Temp\wbrun_1678907216306_8628\fmetmp_3', set from environment variable `FME_TEMP'
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Users\pbcote\AppData\Local\Temp'
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME\'
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 71.71 GB
+2023-03-19 18:16:39|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 53.79 GB
+2023-03-19 18:16:40|   0.1|  0.1|INFORM|Creating writer for format: 
+2023-03-19 18:16:40|   0.1|  0.0|INFORM|Creating reader for format: 
+2023-03-19 18:16:40|   0.1|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
+2023-03-19 18:16:40|   0.1|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding GEODATABASE_FILE Reader with keyword GEODATABASE_FILE_1
+2023-03-19 18:16:40|   0.1|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
+2023-03-19 18:16:40|   0.2|  0.1|INFORM|Creating reader for format: Esri Geodatabase (File Geodb)
+2023-03-19 18:16:40|   0.3|  0.1|INFORM|Trying to find a DYNAMIC plugin for reader named `GEODATABASE_FILE'
+2023-03-19 18:16:40|   0.3|  0.0|INFORM|Loaded module 'GEODATABASE_FILE' from file 'C:\Program Files\FME\plugins/..\geodatabase9.dll'
+2023-03-19 18:16:40|   0.3|  0.0|INFORM|FME API version of module '..\geodatabase9' matches current internal version (4.0 20220615)
+2023-03-19 18:16:40|   0.3|  0.0|INFORM|Opening the Esri Geodatabase reader
+2023-03-19 18:16:43|   1.4|  1.1|INFORM|The ArcObjects license 'Advanced' is being selected from the ESRILicenseInfo ArcObjects call
+2023-03-19 18:16:44|   1.8|  0.4|INFORM|FME has checked out an Esri license. The product checked out is 'Advanced'
+2023-03-19 18:16:44|   1.8|  0.0|INFORM|Installed ArcGIS version is '3.1.0'
+2023-03-19 18:16:45|   1.9|  0.1|INFORM|Connected to the File Geodatabase at 'F:\current_work\projects\Boston\Bos3d\Bos3dDevpbc\Workflows\ModelMgtBPDA-20230228_v4\ModelWork\PublicGardenBridge\batch.gdb'
+2023-03-19 18:16:45|   1.9|  0.0|INFORM|File Geodatabase release: '10.0'
+2023-03-19 18:16:45|   1.9|  0.0|INFORM|GEODATABASE_FILE_1 Reader: Using Enhanced geometry
+2023-03-19 18:16:45|   1.9|  0.0|INFORM|All network information will be ignored. As a result, edges will be treated as polyline features and junctions will be treated as point features
+2023-03-19 18:16:45|   1.9|  0.0|INFORM|All relationship information will be ignored. As a result, simple relationships will not be read, and attributed relationships will be read as tables
+2023-03-19 18:16:45|   1.9|  0.0|INFORM|GEODATABASE_FILE reader: Creating bulk features from individual features
+2023-03-19 18:16:45|   1.9|  0.0|INFORM|Using MultiWriter with keyword `MULTI_WRITER' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2023-03-19 18:16:45|   1.9|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
+2023-03-19 18:16:45|   2.0|  0.1|INFORM|Loaded module 'LogCount_func' from file 'C:\Program Files\FME\plugins/LogCount_func.dll'
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (4.0 20220615)
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|Loaded module 'Geometry_func' from file 'C:\Program Files\FME\plugins/Geometry_func.dll'
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|FME API version of module 'Geometry_func' matches current internal version (4.0 20220615)
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|Loaded module 'GeometryValidationFactory' from file 'C:\Program Files\FME\plugins/GeometryValidationFactory.dll'
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|FME API version of module 'GeometryValidationFactory' matches current internal version (4.0 20220615)
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|Loaded module 'GQueryFactory' from file 'C:\Program Files\FME\plugins/GQueryFactory.dll'
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|FME API version of module 'GQueryFactory' matches current internal version (4.0 20220615)
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|Loaded module 'SharedObjectFactory' from file 'C:\Program Files\FME\plugins/SharedObjectFactory.dll'
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|FME API version of module 'SharedObjectFactory' matches current internal version (4.0 20220615)
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|Loaded module 'TransformPointCloud_func' from file 'C:\Program Files\FME\plugins/TransformPointCloud_func.dll'
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|FME API version of module 'TransformPointCloud_func' matches current internal version (4.0 20220615)
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|Loaded module 'StatisticsCalculatorFactory' from file 'C:\Program Files\FME\plugins/StatisticsCalculatorFactory.dll'
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|FME API version of module 'StatisticsCalculatorFactory' matches current internal version (4.0 20220615)
+2023-03-19 18:16:45|   2.0|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): The following statistics will be calculated 'issue_found.total_count'
+2023-03-19 18:16:46|   2.3|  0.3|INFORM|Predefined coordinate system `MA83F' (NAD83 Massachusetts State Planes, Mainland Zone, US Foot) matches dataset coordinate system 
+2023-03-19 18:16:46|   2.3|  0.0|INFORM|The OGC definition of the FME coordinate system '_MA83F_0' is 'PROJCS["NAD_1983_StatePlane_Massachusetts_Mainland_FIPS_2001_Feet",GEOGCS["GCS_North_American_1983",DATUM["D_North_American_1983",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["False_Easting",656166.6666666665],PARAMETER["False_Northing",2460625.0],PARAMETER["Central_Meridian",-71.5],PARAMETER["Standard_Parallel_1",41.71666666666667],PARAMETER["Standard_Parallel_2",42.68333333333333],PARAMETER["Latitude_Of_Origin",41.0],UNIT["Foot_US",0.3048006096012192]],VERTCS["NAVD88_height_(ftUS)",VDATUM["North_American_Vertical_Datum_1988"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Foot_US",0.3048006096012192]]'
+2023-03-19 18:16:46|   2.3|  0.0|INFORM|Reading feature type 'Prep_MP'
+2023-03-19 18:16:46|   2.3|  0.0|INFORM|FME Configuration: Source coordinate system for reader GEODATABASE_FILE_1[GEODATABASE_FILE] set to `_MA83F_0' as read from input data
+2023-03-19 18:16:46|   2.3|  0.0|INFORM|Coordinate System `_MA83F_0' parameters: CS_NAME=`_MA83F_0' CS_ORIGINAL_NAME=`MA83F' DESC_NM=`NAD83 Massachusetts State Planes, Mainland Zone, US Foot' DT_NAME=`NAD83' EPSG_QD=`1' ESRI_WKT=`PROJCS["NAD_1983_StatePlane_Massachusetts_Mainland_FIPS_2001_Feet",GEOGCS["GCS_North_American_1983",DATUM["D_North_American_1983",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["False_Easting",656166.6666666665],PARAMETER["False_Northing",2460625.0],PARAMETER["Central_Meridian",-71.5],PARAMETER["Standard_Parallel_1",41.71666666666667],PARAMETER["Standard_Parallel_2",42.68333333333333],PARAMETER["Latitude_Of_Origin",41.0],UNIT["Foot_US",0.3048006096012192]],VERTCS["NAVD88_height_(ftUS)",VDATUM["North_American_Vertical_Datum_1988"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Foot_US",0.3048006096012192]]' GROUP=`SPCS83F' MAP_SCL=`1' MAX_LAT=`43.03333333333333' MAX_LNG=`-69.4' MIN_LAT=`41.31666666666667' MIN_LNG=`-73.95' ORG_LAT=`41' ORG_LNG=`-71.5' PARM1=`42.68333333333333' PARM2=`41.71666666666666' PROJ=`LM' QUAD=`1' SCL_RED=`1' SOURCE=`Calculated from MA83 by Mentor Software' UNIT=`FOOT' X_OFF=`656166.6666666666' Y_OFF=`2460625'
+2023-03-19 18:16:46|   2.4|  0.1|WARN  |The table name 'AutoAssembled_MP' could not be found in the Geodatabase as either a feature class or a table
+2023-03-19 18:16:46|   2.4|  0.0|INFORM|TestFilter (TestFactory): Bulk features are not supported due to parameter configuration: Test Clauses
+2023-03-19 18:16:47|   2.5|  0.1|INFORM|FeatureWriter_2: Bulk features are not supported because the expression contains a function call
+2023-03-19 18:16:47|   2.5|  0.0|INFORM|Creating writer for format: 
+2023-03-19 18:16:47|   2.5|  0.0|INFORM|Using MultiWriter with keyword `FeatureWriter_2' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2023-03-19 18:16:47|   2.5|  0.0|INFORM|Creating writer for format: JSON (JavaScript Object Notation)
+2023-03-19 18:16:47|   2.5|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `JSON'
+2023-03-19 18:16:47|   2.6|  0.1|INFORM|Loaded module 'JSON' from file 'C:\Program Files\FME\plugins/JSON.dll'
+2023-03-19 18:16:47|   2.6|  0.0|INFORM|FME API version of module 'JSON' matches current internal version (4.0 20220615)
+2023-03-19 18:16:47|   2.6|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2023-03-19 18:16:47|   2.6|  0.0|INFORM|Writer `FeatureWriter_2_0' of type `JSON' using group definition keyword `FeatureWriter_2_0_DEF'
+2023-03-19 18:16:47|   2.6|  0.0|INFORM|Opening the JSON writer with destination dataset 'F:\current_work\projects\Boston\Bos3d\Bos3dDevpbc\Workflows\ModelMgtBPDA-20230228_v4\ModelWork\PublicGardenBridge\ModelStore\obj\BOS-JRUY7-HLG59-B0MIU_OBJ\BOS-JRUY7-HLG59-B0MIU.json'
+2023-03-19 18:16:47|   2.6|  0.0|INFORM|JSON writer: Splitting bulk features into individual features
+2023-03-19 18:16:47|   2.6|  0.0|INFORM|FME Configuration: Destination coordinate system set to input coordinate system `_MA83F_0'
+2023-03-19 18:16:47|   2.7|  0.1|INFORM|GeometryValidator_3 (GeometryValidationFactory): Splitting bulk features into individual features
+2023-03-19 18:16:47|   2.7|  0.0|INFORM|GeometryValidator (GeometryValidationFactory): Detecting self-intersections in 2D geometries with an automatic tolerance of 5.044847648231975e-9
+2023-03-19 18:16:47|   2.7|  0.0|INFORM|GeometryValidator (GeometryValidationFactory): Detecting self-intersections in 2D geometries with an automatic tolerance of 5.044847648231975e-9
+2023-03-19 18:16:47|   2.7|  0.0|INFORM|GeometryValidator (GeometryValidationFactory): Detecting self-intersections in 2D geometries with an automatic tolerance of 3.416059239492978e-9
+2023-03-19 18:16:47|   2.7|  0.0|INFORM|GeometryValidator (GeometryValidationFactory): Detecting self-intersections in 2D geometries with an automatic tolerance of 3.416059239492978e-9
+2023-03-19 18:16:47|   2.7|  0.0|INFORM|GeometryValidator (GeometryValidationFactory): Detecting self-intersections in 2D geometries with an automatic tolerance of 5.908680399689477e-9
+2023-03-19 18:16:47|   2.8|  0.1|WARN  |AppearanceStyler: Unsupported geometry found. Removing all unsupported geometry from feature
+2023-03-19 18:16:47|   2.8|  0.0|WARN  |GeometryPartExtractor_2_GQuery (GQueryFactory): The Geometry Part XQuery matched no parts; no action will be performed. Further warnings will be suppressed
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|Closing the Esri Geodatabase reader
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|MULTI_READER(MULTI_READER): Done reading 1 features from 1 readers
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|Emptying factory pipeline
+2023-03-19 18:16:47|   2.8|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 1 input feature(s), wrote 1 output feature(s): 1 matched merge filters, 1 were routed to output, 0 could not be routed.
+2023-03-19 18:16:47|   2.8|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AutoAssembled_MP_GEODATABASE_FILE_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |Prep_MP_GEODATABASE_FILE_1 Splitter (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |TestFilter_INPUT (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |TestFilter (TestFactory): Tested 1 input feature(s) -- 1 feature(s) passed and 0 feature(s) failed
+2023-03-19 18:16:47|   2.8|  0.0|STATS |TestFilter <UNFILTERED> Transformer Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AttributeManager OUTPUT Splitter (TeeFactory): Cloned 1 input feature(s) into 4 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|Closing the JSON writer
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|Feature output statistics for `JSON' writer using keyword `FeatureWriter_2_0':
+2023-03-19 18:16:47|   2.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.8|  0.0|STATS |                               Features Written
+2023-03-19 18:16:47|   2.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.8|  0.0|STATS |BOS_I_3 3D Model Collection Issued: 20210806                                 1
+2023-03-19 18:16:47|   2.8|  0.0|STATS |==============================================================================
+2023-03-19 18:16:47|   2.8|  0.0|STATS |Total Features Written                                                       1
+2023-03-19 18:16:47|   2.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.8|  0.0|STATS |SurfaceFootprintReplacer (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |SurfaceFootprintReplacer_router (TestFactory): Tested 1 input feature(s) -- 0 feature(s) passed and 1 feature(s) failed
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|GeometryValidator (GeometryValidationFactory): Detecting self-intersections in 2D geometries 227 additional times with automatic tolerances between 3.329364739233003e-9 and 5.908777600282463e-9
+2023-03-19 18:16:47|   2.8|  0.0|STATS |GeometryValidator PASSED Splitter (TeeFactory): Cloned 1 input feature(s) into 3 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |GeometryValidator FAILED Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |GeometryValidator REPAIRED Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |GeometryValidator INVALID_PARTS Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |ListExploder_2 (ElementFactory): Split out 1 list elements from 2 input features
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AppearanceStyler_GeometryFilter (TestFactory): Tested 1 input feature(s) -- 0 feature(s) passed and 1 feature(s) failed
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AppearanceStyler (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AppearanceSetter_HOLDER (SortFactory): Output 0 feature(s) without doing any sorting
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AppearanceSetter_ColorStyle_Creator (CreationFactory): Created 1 features
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AppearanceSetter_Apply_ColorStyle (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AppearanceSetter_uOriginOffsetRejector (TestFactory): Tested 1 input feature(s) -- 1 feature(s) passed and 0 feature(s) failed
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AppearanceSetter_vOriginOffsetRejector (TestFactory): Tested 1 input feature(s) -- 1 feature(s) passed and 0 feature(s) failed
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AppearanceSetter__textureuRepeatFactorRejector__ (TestFactory): Tested 1 input feature(s) -- 1 feature(s) passed and 0 feature(s) failed
+2023-03-19 18:16:47|   2.8|  0.0|STATS |AppearanceSetter__texturevRepeatFactorRejector__ (TestFactory): Tested 1 input feature(s) -- 1 feature(s) passed and 0 feature(s) failed
+2023-03-19 18:16:47|   2.8|  0.0|STATS |Offsetter_OffsetterInput (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |Offsetter_Offsetter (TeeFactory): Cloned 1 input feature(s) into 1 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|STATS |Offsetter_Rejector (TestFactory): Tested 1 input feature(s) -- 0 feature(s) passed and 1 feature(s) failed
+2023-03-19 18:16:47|   2.8|  0.0|STATS |Offsetter_PointCloudOffsetter (TestFactory): Tested 1 input feature(s) -- 0 feature(s) passed and 1 feature(s) failed
+2023-03-19 18:16:47|   2.8|  0.0|STATS |ListExploder (ElementFactory): Split out 0 list elements from 0 input features
+2023-03-19 18:16:47|   2.8|  0.0|STATS |NullAttributeMapper_2 (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Processing complete
+2023-03-19 18:16:47|   2.8|  0.0|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 3 input feature(s), wrote 3 output feature(s): 0 matched merge filters, 3 were routed to output, 0 could not be routed.
+2023-03-19 18:16:47|   2.8|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': Started outputting features
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|Creating writer for format: 
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|Using MultiWriter with keyword `OBJ_2_FANOUT' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|Writer output will be ordered by input dataset ordering
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|Writer `OBJ_2_FANOUT' of type `MULTI_WRITER' using group definition keyword `MULTI_WRITER_DEF'
+2023-03-19 18:16:47|   2.8|  0.0|INFORM|Creating writer for format: OBJ
+2023-03-19 18:16:47|   2.9|  0.1|INFORM|Trying to find a DYNAMIC plugin for writer named `OBJ'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Loaded module 'OBJ' from file 'C:\Program Files\FME\plugins/obj/obj.dll'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|FME API version of module 'obj/obj' matches current internal version (4.0 20220615)
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Writer `OBJ_2' of type `OBJ' using group definition keyword `OBJ_2_DEF'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Opening File Writer on dataset: 'F:\current_work\projects\Boston\Bos3d\Bos3dDevpbc\Workflows\ModelMgtBPDA-20230228_v4\ModelWork\PublicGardenBridge\ModelStore\obj\BOS-JRUY7-HLG59-B0MIU_OBJ'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Reverse Face Order: 'No'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Triangulate Faces: 'Yes'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Write Points and Lines: 'No'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Write FME Version to OBJ file: 'Yes'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Write Mesh Vertex Colors: 'Yes'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Write Texture List File: 'No'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Fix Names: 'Yes'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: File per Feature: 'No'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|FME Configuration: Destination coordinate system set to input coordinate system `_MA83F_0'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Double sided surface encountered, auto-picking one side. Use SurfaceSplitter to preserve both sides
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Material Library File: 'F:\current_work\projects\Boston\Bos3d\Bos3dDevpbc\Workflows\ModelMgtBPDA-20230228_v4\ModelWork\PublicGardenBridge\ModelStore\obj\BOS-JRUY7-HLG59-B0MIU_OBJ\materials.mtl'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|OBJ Writer: Closing File Writer
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Feature output statistics for `OBJ' writer using keyword `OBJ_2':
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |                               Features Written
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |BOS-JRUY7-HLG59-B0MIU                                                        1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |==============================================================================
+2023-03-19 18:16:47|   2.9|  0.0|STATS |Total Features Written                                                       1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Feature output statistics for `MULTI_WRITER' writer using keyword `OBJ_2_FANOUT':
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |                               Features Written
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |BOS-JRUY7-HLG59-B0MIU                                                        1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |==============================================================================
+2023-03-19 18:16:47|   2.9|  0.0|STATS |Total Features Written                                                       1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `1': done writing 1 feature(s) 
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `2': Started outputting features
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Creating writer for format: GeoJSON (Geographic JavaScript Object Notation)
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `GEOJSON'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Writer `GEOJSON_1' of type `GEOJSON' using group definition keyword `GEOJSON_1_DEF'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|GeoJSON Writer: All features not in WGS84 will be reprojected to WGS84
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Opening the GEOJSON writer with destination dataset 'F:\current_work\projects\Boston\Bos3d\Bos3dDevpbc\Workflows\ModelMgtBPDA-20230228_v4\ModelWork\PublicGardenBridge\ModelStore\catalogPolys.js'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|GEOJSON writer: Splitting bulk features into individual features
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|FME Configuration: Destination coordinate system set to input coordinate system `_MA83F_0'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|FME Configuration: Using FME Reprojection Engine
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CS-MAP Reprojector: Transformation will be automatically selected for '_MA83F_0' -> 'LL84', and is not guaranteed to remain the same in future releases of FME
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Reprojector: Using transformation `NAD83_to_WGS84,Forward(Null,EPSG:1188)' when reprojecting from _MA83F_0 to LL84
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Closing the GEOJSON writer
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Feature output statistics for `GEOJSON' writer using keyword `GEOJSON_1':
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |                               Features Written
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |CatalogPolys.js                                                              1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |==============================================================================
+2023-03-19 18:16:47|   2.9|  0.0|STATS |Total Features Written                                                       1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `2': done writing 1 feature(s) 
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `3': Started outputting features
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Creating writer for format: CSV (Comma Separated Value)
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `CSV2'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Loaded module 'CSV2' from file 'C:\Program Files\FME\plugins/CSV2.dll'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|FME API version of module 'CSV2' matches current internal version (4.0 20220615)
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Writer `CSV2_1' of type `CSV2' using group definition keyword `CSV2_1_DEF'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_EXTENSION' has the value 'csv'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_DELIMITER' has the value ','
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_ENCODING' has the value 'UTF-8'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_WRITE_BOM_FOR_UNICODE' has the value 'Yes'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_QUALIFY_FIELD_NAMES' has the value 'if_needed'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_QUALIFY_FIELD_VALUES' has the value 'if_needed'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_TREAT_EMBEDDED_FIELD_QUALIFIERS_AS_UNSAFE' has the value 'Yes'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_FIELD_QUALIFIER_CHARACTER' has the value '"'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_FIELD_QUALIFIER_ESCAPE_CHARACTER' has the value '"'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_ROW_TERMINATION' has the value 'System'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Directive '_WRITE_SCHEMA_FILE' has the value 'NO'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Opening dataset 'F:\current_work\projects\Boston\Bos3d\Bos3dDevpbc\Workflows\ModelMgtBPDA-20230228_v4\ModelWork\PublicGardenBridge\ModelStore\catalog.csv'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|CSV writer: Writing 1 feature(s) to file 'F:\current_work\projects\Boston\Bos3d\Bos3dDevpbc\Workflows\ModelMgtBPDA-20230228_v4\ModelWork\PublicGardenBridge\ModelStore\catalog.csv'
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Feature output statistics for `CSV2' writer using keyword `CSV2_1':
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |                               Features Written
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |catalog                                                                      1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |==============================================================================
+2023-03-19 18:16:47|   2.9|  0.0|STATS |Total Features Written                                                       1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|MULTI_WRITER: multi_writer_id `3': done writing 1 feature(s) 
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |                            Features Read Summary
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |Prep_MP                                                                      1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |==============================================================================
+2023-03-19 18:16:47|   2.9|  0.0|STATS |Total Features Read                                                          1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |                           Features Written Summary
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|STATS |BOS-JRUY7-HLG59-B0MIU                                                        1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |CatalogPolys.js                                                              1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |catalog                                                                      1
+2023-03-19 18:16:47|   2.9|  0.0|STATS |==============================================================================
+2023-03-19 18:16:47|   2.9|  0.0|STATS |Total Features Written                                                       3
+2023-03-19 18:16:47|   2.9|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2023-03-19 18:16:47|   2.9|  0.0|INFORM|Translation was SUCCESSFUL with 3 warning(s) (3 feature(s) output)
+2023-03-19 18:16:47|   3.0|  0.1|INFORM|FME Session Duration: 9.2 seconds. (CPU: 1.7s user, 1.3s system)
+2023-03-19 18:16:47|   3.0|  0.0|INFORM|END - ProcessID: 20620, peak process memory usage: 262396 kB, current process memory usage: 223668 kB
